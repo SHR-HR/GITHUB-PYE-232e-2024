@@ -1,0 +1,644 @@
+<!-- ########################################################################################## -->
+ <!-- HTML#4 - Блочная структура элементов. Свойство Display. Размеры - 29.01.2024 -->
+ <!-- ПРАКТИЧЕСКАЯ РАБОТА во ВРЕМЯ КЛАССНОГО УРОКА (ПАРЫ) - 29.01.2024 -->
+ <!-- ВАРИАНТ №1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Внешние библиотеки (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Стили -->
+    <style>
+        body {
+            margin-top: 20px;
+            background: #FAFAFA;
+        }
+        .dashboard-card {
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+            border: none;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .dashboard-card .card-block {
+            padding: 25px;
+        }
+        .dashboard-card i {
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-info dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Заказы получены</h6>
+                        <h2 class="text-right"><i class="fa fa-cart-plus float-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Завершенные заказы<span class="float-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-success dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Заказы получены</h6>
+                        <h2 class="text-right"><i class="fa fa-rocket float-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Завершенные заказы<span class="float-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-warning dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Заказы получены</h6>
+                        <h2 class="text-right"><i class="fa fa-refresh float-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Завершенные заказы<span class="float-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Внешние скрипты (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- По подробнее как в Python -->
+
+Объявление HTML-документа:
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>: Объявление типа документа HTML5.
+<html lang="en">: Открывающий тег для HTML-документа с указанием языка (английский).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Заголовок документа:
+
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="utf-8">: Устанавливает кодировку документа.
+<title>: Заголовок документа, отображается во вкладке браузера.
+<meta name="viewport" content="width=device-width, initial-scale=1">: Устанавливает настройки
+просмотра для устройств с различной шириной экрана.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Подключение стилей:
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+Подключаются стили Bootstrap и шрифтов Font Awesome с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Описание стилей внутри тега <style>:
+
+<style>
+    body {
+        margin-top: 20px;
+        background: #FAFAFA;
+    }
+    .dashboard-card {
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+        border: none;
+        margin-bottom: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+    .dashboard-card .card-block {
+        padding: 25px;
+    }
+    .dashboard-card i {
+        font-size: 26px;
+    }
+</style>
+
+Здесь определены пользовательские стили для элементов. Например, фон body, стили
+карточек .dashboard-card и размер иконок внутри этих карточек.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Основное содержимое документа:
+
+<body>
+    <!-- ... -->
+</body>
+
+Весь контент страницы помещается внутрь тега <body>.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Контент с использованием Bootstrap:
+
+Внутри <body> размещаются карточки, созданные с использованием Bootstrap.
+Каждая карточка находится внутри <div class="card bg-... dashboard-card"> и имеет свой уникальный
+    цвет (bg-info, bg-success, bg-warning).
+Иконки и текст внутри карточек заполняются данными.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Подключение внешних скриптов:
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+Подключаются внешние скрипты (jQuery, Popper.js, Bootstrap.js) с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+ <!-- <!-- ВАРИАНТ №2 --> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Внешние библиотеки (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Стили -->
+    <style>
+        body {
+            margin-top: 20px;
+            background: #FAFAFA;
+        }
+        .dashboard-card {
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+            border: none;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .dashboard-card .card-block {
+            padding: 25px;
+        }
+        .dashboard-card i {
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-info dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Заказы получены</h6>
+                        <h2 class="text-right"><i class="fa fa-cart-plus float-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Завершенные заказы<span class="float-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-success dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Продукция в пути</h6>
+                        <h2 class="text-right"><i class="fa fa-truck float-left"></i><span>123</span></h2>
+                        <p class="m-b-0">Завершенные доставки<span class="float-right">87</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-warning dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Товары на складе</h6>
+                        <h2 class="text-right"><i class="fa fa-cubes float-left"></i><span>789</span></h2>
+                        <p class="m-b-0">Товары в резерве<span class="float-right">456</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-danger dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Возвраты</h6>
+                        <h2 class="text-right"><i class="fa fa-undo float-left"></i><span>10</span></h2>
+                        <p class="m-b-0">Обработанные возвраты<span class="float-right">5</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-primary dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Поддержка клиентов</h6>
+                        <h2 class="text-right"><i class="fa fa-headphones float-left"></i><span>24/7</span></h2>
+                        <p class="m-b-0">Запросы<span class="float-right">120</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-secondary dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Новые клиенты</h6>
+                        <h2 class="text-right"><i class="fa fa-users float-left"></i><span>50</span></h2>
+                        <p class="m-b-0">Клиенты на обслуживании<span class="float-right">20</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Внешние скрипты (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- По подробнее как в Python -->
+
+Объявление HTML-документа:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!DOCTYPE html>: Объявление типа документа HTML5.
+<html lang="en">: Открывающий тег для HTML-документа с указанием языка (английский).
+<head>: Секция заголовка документа.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Метаинформация и подключение стилей:
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Внешние библиотеки (CDN) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset="utf-8">: Устанавливает кодировку документа.
+<meta name="viewport" content="width=device-width, initial-scale=1">: Настройка просмотра для устройств с различной
+    шириной экрана.
+Подключение внешних стилей Bootstrap и Font Awesome с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Описание пользовательских стилей в теге <style>:
+
+<style>
+    body {
+        margin-top: 20px;
+        background: #FAFAFA;
+    }
+    .dashboard-card {
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+        border: none;
+        margin-bottom: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+    .dashboard-card .card-block {
+        padding: 25px;
+    }
+    .dashboard-card i {
+        font-size: 26px;
+    }
+</style>
+
+Устанавливаются пользовательские стили для элементов страницы, таких как body и .dashboard-card.
+    Эти стили определяют отступы, фон, тени и другие характеристики.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Содержимое страницы:
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Карточки с информацией -->
+        </div>
+    </div>
+</body>
+Контент страницы находится внутри <body>. Карточки размещаются внутри контейнера с
+классом container и строки с классом row.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Карточки:
+
+Каждая карточка находится внутри <div class="col-md-4"> (каждая из них занимает 1/3 ширины экрана).
+Класс card определяет, что это карточка Bootstrap. Классы bg-info, bg-success, bg-warning, и т. д.,
+    устанавливают цвет фона для каждой карточки.
+Иконки и содержимое карточек заполняются данными.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Подключение внешних скриптов:
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+Подключаются внешние скрипты (jQuery, Popper.js, Bootstrap.js) с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+ <!-- ВАРИАНТ №3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Внешние библиотеки (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Стили -->
+    <style>
+        body {
+            margin-top: 20px;
+            background: #FAFAFA;
+        }
+        .dashboard-card {
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+            border: none;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .dashboard-card .card-block {
+            padding: 25px;
+        }
+        .dashboard-card i {
+            font-size: 26px;
+        }
+        /* Дополнительные стили или анимации могут быть добавлены здесь */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="dashboard-cards">
+
+            <div class="col-md-4 mb-3">
+                <div class="card bg-info dashboard-card" id="card1">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Еда и Напитки</h6>
+                        <i class="fa fa-cutlery float-left"></i>
+                        <h2 class="text-right"><span id="value1">100</span></h2>
+                        <p class="m-b-0">Выполненные заказы <span class="float-right">50 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-success dashboard-card" id="card2">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Ноутбуки и ПК</h6>
+                        <i class="fa fa-laptop float-left"></i>
+                        <h2 class="text-right"><span id="value2">75</span></h2>
+                        <p class="m-b-0">Товары в наличии<span class="float-right">25 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-warning dashboard-card" id="card3">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Транспорт</h6>
+                        <i class="fa fa-car float-left"></i>
+                        <h2 class="text-right"><span id="value3">50</span></h2>
+                        <p class="m-b-0">Автомобили в наличии<span class="float-right">10 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-danger dashboard-card" id="card4">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Смартфоны и Гаджеты</h6>
+                        <i class="fa fa-mobile float-left"></i>
+                        <h2 class="text-right"><span id="value4">120</span></h2>
+                        <p class="m-b-0">Гаджеты в наличии<span class="float-right">80 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-primary dashboard-card" id="card5">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Доставка</h6>
+                        <i class="fa fa-truck float-left"></i>
+                        <h2 class="text-right"><span id="value5">60</span></h2>
+                        <p class="m-b-0">Заказы в пути<span class="float-right">400 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-secondary dashboard-card" id="card6">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Одежда и Аксессуары</h6>
+                        <i class="fa fa-shopping-bag float-left"></i>
+                        <h2 class="text-right"><span id="value6">30</span></h2>
+                        <p class="m-b-0">Модные новинки 2024<span class="float-right">20 000</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function updateValues() {
+            document.getElementById('value1').innerText = getRandomInt(1, 200);
+            document.getElementById('value2').innerText = getRandomInt(1, 200);
+            document.getElementById('value3').innerText = getRandomInt(1, 200);
+            document.getElementById('value4').innerText = getRandomInt(1, 200);
+            document.getElementById('value5').innerText = getRandomInt(1, 200);
+            document.getElementById('value6').innerText = getRandomInt(1, 200);
+        }
+
+        // Обновление значений каждые 5 секунд
+        setInterval(updateValues, 5000);
+    </script>
+</body>
+</html>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- По подробнее как в Python -->
+
+Объявление HTML-документа:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!DOCTYPE html>: Объявление типа документа HTML5.
+<html lang="en">: Открывающий тег для HTML-документа с указанием языка (английский).
+<head>: Секция заголовка документа.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Метаинформация и подключение стилей:
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Внешние библиотеки (CDN) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Стили -->
+<style>
+    /* Стили остаются теми же, что и в предыдущем примере */
+</style>
+
+<meta charset="utf-8">: Устанавливает кодировку документа.
+<meta name="viewport" content="width=device-width, initial-scale=1">: Настройка просмотра для устройств с различной
+    шириной экрана.
+Подключение внешних стилей Bootstrap и Font Awesome с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Описание пользовательских стилей:
+
+<style>
+    /* Стили остаются теми же, что и в предыдущем примере */
+</style>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Содержимое страницы:
+
+<body>
+    <div class="container">
+        <div class="row" id="dashboard-cards">
+            <!-- Карточки с информацией -->
+        </div>
+    </div>
+</body>
+
+Контент страницы находится внутри <body>. Карточки размещаются внутри контейнера с классом container и строки с классом row.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Карточки:
+
+Каждая карточка находится внутри <div class="col-md-4 mb-3"> (каждая из них занимает 1/3 ширины экрана).
+Индивидуальные идентификаторы (id) присваиваются каждой карточке (card1, card2, и т.д.).
+Иконки и содержимое карточек заполняются данными. Обратите внимание на использование спанов с id для
+    отображения и обновления случайных значений.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Подключение внешних скриптов:
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+Подключаются внешние скрипты (jQuery, Popper.js, Bootstrap.js) с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+JavaScript-скрипт:
+
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function updateValues() {
+        // Обновление случайных значений внутри карточек
+        document.getElementById('value1').innerText = getRandomInt(1, 200);
+        document.getElementById('value2').innerText = getRandomInt(1, 200);
+        document.getElementById('value3').innerText = getRandomInt(1, 200);
+        document.getElementById('value4').innerText = getRandomInt(1, 200);
+        document.getElementById('value5').innerText = getRandomInt(1, 200);
+        document.getElementById('value6').innerText = getRandomInt(1, 200);
+    }
+
+    // Обновление значений каждые 5 секунд
+    setInterval(updateValues, 5000);
+</script>
+
+Создаются две функции: getRandomInt для получения случайного целого числа в заданном
+    диапазоне и updateValues для обновления значений в карточках.
+setInterval(updateValues, 5000): Запуск функции обновления значений каждые 5 секунд.
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+Домашнее задание
+
+Курс: Разработка интерфейса на JavaScript
+Дисциплина: Основы HTML и CSS
+
+Домашнее задание №4: Блочная структура элементов. Свойство Display. Размеры
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+1. Создать страницу, как на примере: "Флексагон"
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!DOCTYPE html>
+<html>
+ <head>
+  <title>Флексагон</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+     <style>
+         body {
+  font-family: Arial, Verdana,  sans-serif; /* Семейство шрифтов */
+  font-size: 20pt; /* Размер основного шрифта в пунктах  */
+  background-color: #f0f0f0; /* Цвет фона веб-страницы */
+  color: #333; /* Цвет основного текста */
+}
+h1 {
+  color: #a52a2a; /* Цвет заголовка */
+  font-size: 75pt; /* Размер шрифта в пунктах */
+  font-family: Georgia, Times, serif; /* Семейство шрифтов */
+  font-weight: normal; /* Нормальное начертание текста  */
+}
+p {
+  text-align: justify; /* Выравнивание по ширине */
+  margin-left: 75px; /* Отступ слева в пикселах */
+  margin-right: 10px; /* Отступ справа в пикселах */
+  border-left: 1px solid #999; /* Параметры линии слева */
+  border-bottom: 1px solid #999; /* Параметры линии снизу */
+  padding-left: 10px; /* Отступ от линии слева до текста  */
+  padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+}
+     </style>
+ </head>
+ <body>
+  <h1>Флексагон</h1>
+  <p><b>Флексагон представляет собой бумажную фигуру, которая имеет
+  три и более стороны. Поначалу кажется, что это невозможно, но вспомните
+  ленту Мёбиуса, она ведь имеет всего одну сторону, в отличие от листа  бумаги,
+  и, тем не менее, реальна. Так же реален и флексагон, который легко сделать и
+  склеить в домашних условиях. Он выглядит как двухсторонний шестиугольник, но
+  стоит согнуть его особым образом, и мы увидим третью сторону. Легко убедиться,
+  что мы имеем дело именно с тремя сторонами, если раскрасить их в разные цвета.
+  Перегибая флексагон, по очереди будем наблюдать все его поверхности.</b></p>
+ </body>
+</html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+2. Создать страницу, как на примере: "Вот такой чай"
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Блоки</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<style>
+    .text {
+    margin: 20px;
+    padding: 10px;
+}
+.www {
+    background-color: #569099;
+    color: white;
+    font-size: 80px;
+}
+.sss {
+    color: black;
+    background-color: #CAD8D0;
+    font-size: 30px;
+}
+</style>
+<body>
+    <div class="text www"><b>Вот такой чай</b></div>
+    <div class="text sss">
+        История о том, как один человек хотел попить чайку, но по ошибке
+        вместо воды попытался налить в чайник бензин, и что из этого получилось.
+    </div>
+</body>
+</html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+

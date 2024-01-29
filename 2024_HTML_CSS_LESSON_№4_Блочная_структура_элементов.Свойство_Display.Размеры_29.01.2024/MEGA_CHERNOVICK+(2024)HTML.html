@@ -1,0 +1,3104 @@
+<!-- ########################################################################################## -->
+ <!-- HTML#1 Recap + Вводный ПЕРВЫЙ УРОК - 08.01.2024 -->
+ 
+ <!-- <html>
+    <head>
+       
+        <meta charset="UTF-8" />
+        <title>Hello HTML</title>
+    </head>
+    <body>
+        
+        hello world
+        Привет Мир
+
+    <img src="https://pngicon.ru/file/uploads/serdce.png"
+         height="150px" width="150px"/>
+    <h1>Вау - я программист</h1>
+    </body>
+</html> -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+
+<!-- 2024_HTML_LESSON_№2_Структура_HTML.Теги_Атрибуты - 15.01.2024 -->
+
+<!--
+
+Домашнее задание
+
+Курс: Разработка интерфейса на JavaScript
+Дисциплина: Основы HTML и CSS
+Домашнее задание № 2 : Структура HTML. Теги. Атрибуты. Правила языка разметки
+-->
+
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с текстом и заголовками</title>
+</head>
+<body>
+
+    <!-- 1. Создать страницу с текстом по примеру на картинке. -->
+
+    <h2>
+        Стихотворение
+    </h2>
+    <p>
+
+        Мириады маленьких дел<br>
+        Пьют по капле гаснущий день,<br>
+        А <i>дела большие</i> сушит жажда.<br>
+        Оставляя все на «потом»,<br>
+        Прозреваем задним числом,<br>
+        Только год <b>не повторится</b> дважды.<br>
+        <br>
+        И. Тальков
+
+    </p>
+
+    <!-- 2. Повторите по данному образцу: -->
+    <h1>Это заголовок</h1>
+    <h2>Это заголовок</h2>
+    <h3>Это заголовок</h3>
+    <h4>Это заголовок</h4>
+
+    <p>Это <b>абзац</b>.</p>
+    <p>Это еще <i>абзац</i>.</p>
+
+    <h1><i>Это заголовок h1</i></h1>
+
+</body>
+</html>
+
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+
+
+
+
+
+03_Введение в CSS. Форматирование текста при помощи CSS - 22.01.2024
+Классная работа
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Lesson 2</title>
+    <script>
+        /* легкий init js */
+    </script>
+    <meta description="Краткое описание содержимого/контента страницы" />
+    <meta keywords="купить, по акции, новый" />
+    <style>
+        html, body {font-size: 10px; font-family: "Rubik Burned", system-ui;}
+        h1{font-size: 4rem}
+        h2{font-size: 3rem}
+        h3{font-size: 2rem}
+        h4{font-size: 1rem}
+    </style>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div style="display: flex">
+        <img style="width: 33.333333%" src="https://mir-s3-cdn-cf.behance.net/projects/202/08d50f175132235.Y3JvcCwxODIzLDE0MjYsMTQ4LDEzMA.jpeg"/>
+        <img style="width: 33.333333%" src="https://mir-s3-cdn-cf.behance.net/projects/202/08d50f175132235.Y3JvcCwxODIzLDE0MjYsMTQ4LDEzMA.jpeg"/>
+        <img style="width: 33.333333%" src="https://mir-s3-cdn-cf.behance.net/projects/202/08d50f175132235.Y3JvcCwxODIzLDE0MjYsMTQ4LDEzMA.jpeg"/>
+    </div>
+    <div>
+        <h1 class="heading-of-section text-red text-krasnii">Красный</h1>
+        <p class="text-orange">Оранжевый</p>
+        <div>
+            <p class="button default">Нажми меня</p>
+            <div class="button alert">Нажми меня</div>
+            <button class="button alert" alt="Для оформления заказа нажмите эту кнопку">Нажми меня</button>
+        </div>
+        <div>
+            <div class="display-inline rounded-md shadow-md padding-md bg-gray">Нажми меня</div>
+            <div class="display-inline rounded-md shadow-md padding-md bg-red">Нажми меня</div>
+            <div class="display-inline rounded-md shadow-md padding-md bg-blue">Нажми меня</div>
+        </div>
+    </div>
+    <b>Жирный текст</b>
+    <h1 style="text-decoration: line-through">Панды, наконец-то полетят на Марс</h1>
+    <h2 class="heading">Глава 1: далекий путь с одного шага</h2>
+        <h3 class="heading">Hello world</h3>
+            <h4 class="text-red">Hello world</h4>
+                <h5>Hello world</h5>
+                    <h6 class="bg-blue">Hello world</h6>
+
+    <h2 class="heading">Глава 1: далекий путь с одного шага</h2>
+        <h3>Hello world</h3>
+            <h4 id="heading-h4-1">Hello world</h4>
+            <h4 id="heading-h4-2">Hello world</h4>
+            <h4>Hello world</h4>
+        <h3 class="text-lg text-rose-500 bg-gray-100 rounded-md">Hello world</h3>
+        <h3>Hello world</h3>
+
+        <p>
+            paragraph <b>lorem</b>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            ipsum set <i><b>ВАЖНО!</b></i> dolor
+            <br/>
+            ipsum set <strong><em>Кликни &rarr;</em></strong> dolor
+            <br/>
+            2*2
+            <br/>
+            2x2
+            <br/>
+            2&cross;2
+        </p>
+</body>
+</html>
+
+
+
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+22.01.2024 - Домашняя и практическая - работы.
+<!-- ########################################################################################## -->
+Практическая работа
+
+Курс: Разработка интерфейса на JavaScript
+Дисциплина: Основы HTML и CSS
+Тема занятия №3 Введение в CSS. Форматирование текста при помощи CSS
+1. Создать HTML-страницу “Vehicle”
+Текст можете найти в архиве Classwork в папке Материалы к занятию.
+
+2. Создать HTML-страницу “Lorem Ipsum”
+Текст можете найти в архиве Classwork в папке Материалы к занятию.
+
+3. Создать HTML-страницу “Математические формулы”
+
+Текст можете найти в архиве Classwork в папке Материалы к занятию.
+Используйте здесь теги h1-h6, span, p, sup, sub и спецсимволы.
+<!-- ########################################################################################## -->
+
+Шрифты находятся в папке Материалы к занятию в архиве Fonts.
+
+1. Пример подключение шрифтов через ссылку
+2. Пример подключения через локальные файлы шрифтов
+<!-- ########################################################################################## -->
+
+№1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Двигатель</title>
+    <style>
+        body {
+            font-family: 'Tahoma', serif;
+            line-height: 1.6;
+            margin: 18px;
+        }
+
+        h1 {
+            color: #00c264;
+        }
+        h2 {
+            color: #9b05ff;
+        }
+        h3 {
+            color: #ff0505;
+        }
+        h4 {
+            color: #00a0eb;
+        }
+        h5 {
+            color: #00a0eb;
+        }
+        h6 {
+            color: #ffff05;
+        }
+        p {
+            text-align: justify;
+        }
+        .no-underline {
+    text-decoration: none;
+  }
+        .larger-font {
+    font-size: 20px;
+  }
+        .larger-font2 {
+    font-size: 40px;
+  }
+  .smaller-text {
+    font-size: 58%; /* Измените на желаемый размер шрифта */
+  }
+        .slightly-bold {
+    font-weight: bold; /* или font-weight: 600; */
+  }
+         .subtle-line {
+    border: 2px solid #9e9e9e; /* Измените на нужный цвет и стиль линии */
+    margin: 0px 0; /* Добавьте отступы по желанию */
+  }
+         .colored-letter {
+    color: #00a0eb; /* Измените на желаемый цвет */
+  }
+    </style>
+
+</head>
+<body>
+    <h1
+            class="larger-font2">
+        Двигатель
+    </h1>
+    <!-- Текст о двигателе с сайта https://ru.wikipedia.org/wiki/Двигатель -->
+
+    <p
+        class="larger-font">
+    <b>Дви́гатель</b> — устройство, преобразующее
+        какой-либо вид <a href="https://ru.wikipedia.org/wiki/Энергия" class="no-underline">энергии</a>
+         в <a href="https://ru.wikipedia.org/wiki/Механическая_энергия" class="no-underline">механическую</a> работу.
+    Термин <b>мотор</b> <a href="https://ru.wikipedia.org/wiki/Заимствование"class="no-underline"> заимствован</a> в
+        первой половине XIX века из немецкого языка<b
+            class="smaller-text colored-letter">[1]</b>
+        (нем. Motor — «двигатель», от лат. mōtor — «приводящий в движение») и преимущественно им называют электрические
+        двигатели и двигатели внутреннего сгорания<b
+            class="smaller-text colored-letter">
+        [2]</b>.
+    </p>
+    <p
+            class="larger-font">
+        Двигатели подразделяют на первичные и вторичные.
+    К первичным относят непосредственно преобразующие природные энергетические ресурсы в механическую работу,
+    а ко вторичным — преобразующие энергию, выработанную или накопленную другими источниками<b
+            class="smaller-text colored-letter">
+        [3]</b>.
+    </p>
+<hr class="subtle-line">
+    <p>
+    <h4>Примечания</h4>
+    <h5>[1]</h5>Шанский Н. М., Боброва Т. А. Кот // Школьный этимологический словарь русского языка.
+    Происхождение слов. — 7-е изд., стереотип.. — М.: Дрофа, 2004. — 398, [2] с.
+    <h5>[2]</h5>Крысин Л. П. Мотор // Толковый словарь иноязычных слов. — М.: Эксмо, 2008. — 944 с. —
+    (Библиотека словарей).
+    <h5>[3]</h5>Definition of motor | Dictionary.com (англ.). www.dictionary.com.
+    Дата обращения: 27 января 2022. Архивировано 27 января 2022 года.
+</p>
+</body>
+</html>
+<!-- ########################################################################################## -->
+
+№2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum</title>
+    <style>
+
+        h1 {
+            color: #5d0080;
+        }
+        h2 {
+            color: #9b05ff;
+        }
+        h3 {
+            color: #ff0505;
+        }
+        h4 {
+            color: #00a0eb;
+        }
+        h5 {
+            color: #00a0eb;
+        }
+        h6 {
+            color: #ffff05;
+        }
+        p {
+            text-align0: justify;
+        }
+          .left-aligned1 {
+    text-align: left;
+  }
+
+  .right-aligned2 {
+    text-align: right;
+  }
+
+  .custom-font {
+    font-family: "Courier New", monospace;
+  }
+  .custom-font2 {
+    font-family: "mv boli", monospace;
+  }
+  .custom-font3 {
+    font-family: "segoe print", monospace;
+  }
+  .custom-font4 {
+    font-family: "LUCIDA SANS CONSOLE", monospace;
+  }
+  .custom-font5 {
+    font-family: "GABRIOLA", monospace;
+  }
+  .custom-font6 {
+    font-family: "tempus sans itc", monospace;
+  }
+  .bold-text {
+    font-weight: bold;
+  }
+
+  .italic-text {
+    font-style: italic;
+  }
+        .no-underline {
+    text-decoration: none;
+  }
+        .larger-font {
+    font-size: 20px;
+  }
+        .larger-font2 {
+    font-size: 40px;
+  }
+        .larger-font3 {
+    font-size: 50px;
+  }
+  .centered-text {
+    text-align: center;
+  }
+
+  .centered-container {
+    margin: 0 auto;
+    width: 50%; /* Измените на желаемую ширину */
+  }
+
+  .smaller-text {
+    font-size: 95%; /* Измените на желаемый размер шрифта */
+  }
+   .smaller-text2 {
+    font-size: 80%; /* Измените на желаемый размер шрифта */
+  }
+   .smaller-text3 {
+    font-size: 115%; /* Измените на желаемый размер шрифта */
+  }
+   .smaller-text4 {
+    font-size: 15%; /* Измените на желаемый размер шрифта */
+  }
+        .slightly-bold {
+    font-weight: bold; /* или font-weight: 600; */
+  }
+         .subtle-line {
+    border: 2px solid #9e9e9e; /* Измените на нужный цвет и стиль линии */
+    margin: 0px 0; /* Добавьте отступы по желанию */
+  }
+  .subtle-line2 {
+    border: 1px solid #f2f2f2; /* Измените на нужный цвет и стиль линии */
+    margin: 0px 0; /* Добавьте отступы по желанию */
+  }
+         .colored-letter {
+    color: #00a0eb; /* Измените на желаемый цвет */
+  }
+         .custom-color1 {
+    color: #001fb8; /* Замените на желаемый цвет */
+  }
+         .custom-color2 {
+    color: #6e6e6e; /* Замените на желаемый цвет */
+  }
+         .page-container {
+    margin: 20px; /* Замените на желаемое значение отступа */
+  }
+    </style>
+</head>
+<body>
+    <h1 class="centered-text larger-font3 custom-font4">Lorem Ipsum</h1>
+<div class="right-aligned2 custom-color1 custom-font3 italic-text smaller-text">
+  <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...".</p>
+</div>
+    <div class="right-aligned2 custom-font2 custom-color2 italic-text smaller-text2 larger-font">
+  <p>"Нет никого, кто любил бы боль саму по себе, кто искал бы её и кто хотел бы иметь её
+      просто потому, что это боль..".</p>
+</div>
+    <hr class="subtle-line2">
+    <!-- Пример текста Lorem Ipsum -->
+    <div class="page-container">
+    <p class="larger-font custom-font"><b>
+        Классический текст Lorem Ipsum, используемый с XVI века
+    </p></b>
+<p class="custom-font6 smaller-text3">
+        "<b>L</b>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum."
+</p>
+    <p class="larger-font custom-font"><b>
+        Абзац 1.10.32 "de Finibus Bonorum et Malorum", написанный Цицероном в 45 году н.э.
+    </p></b>
+<p class="custom-font6 smaller-text3">
+        "<b>S</b>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+    aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+    eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
+    quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+    ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
+    nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+</p>
+    <p class="larger-font custom-font"><b>
+        Английский перевод 1914 года, H. Rackham
+    </p></b>
+<p class="custom-font6 smaller-text3">
+        "<b>B</b>ut I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and
+    I will give you a complete account of the system, and expound the actual teachings of the great explorer of the
+    truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is
+    pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are
+    extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it
+    is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+    To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage
+    from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying
+    consequences, or one who avoids a pain that produces no resultant pleasure?"
+</p>
+    <p class="larger-font custom-font"><b>
+        Абзац 1.10.33 "de Finibus Bonorum et Malorum", написанный Цицероном в 45 году н.э.
+    </p></b>
+<p class="custom-font6 smaller-text3">
+        "<b>A</b>t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
+    in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est
+    et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+    quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+    quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+    molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+    maiores alias consequatur aut perferendis doloribus asperiores repellat."
+</p>
+    <p class="larger-font custom-font"><b>
+        Английский перевод 1914 года, H. Rackham
+    </p></b>
+<p class="custom-font6 smaller-text3">
+        "<b>O</b>n the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized
+    by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that
+    are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the
+    same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.
+    In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we
+    like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the
+    claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and
+    annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he
+    rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+</p>
+        </div>
+</body>
+</html>
+
+<!-- ########################################################################################## -->
+
+№3
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математические формулы</title>
+    <style>
+        /* Общие стили для всего документа */
+        body {
+            font-family: 'VERDANA', monospace; /* Устанавливаем шрифт для всего документа */
+            line-height: 1.0; /* Задаем высоту строки текста */
+            margin: 70px; /* Задаем отступы для всего документа */
+        }
+
+        /* Стили для заголовка первого уровня */
+        h1 {
+            color: #000000; /* Цвет текста */
+            text-align: center; /* Выравнивание текста по центру */
+            font-size: 50px; /* Размер шрифта */
+            font-weight: bold; /* Жирный шрифт */
+        }
+
+        /* Стили для заголовка второго уровня */
+        h2 {
+            color: #22009e; /* Цвет текста */
+            font-size: 35px; /* Размер шрифта */
+            margin-top: 20px; /* Верхний отступ */
+        }
+
+        /* Стили для подзаголовка */
+        h3 {
+            color: #00ff49; /* Цвет текста */
+            font-size: 25px; /* Размер шрифта */
+            font-weight: bold; /* Жирный шрифт */
+            font-style: italic; /* Курсив */
+            text-align: left; /* Выравнивание текста влево */
+            background-color: #a300a3b8; /* Цвет подложки */
+            padding: 10px; /* Внутренний отступ */
+            border-radius: 45px; /* Закругленные углы подложки */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень подложки */
+            max-width: 320px; /* Максимальная ширина подложки */
+            width: 25%; /* Ширина подложки равна 20% родительского контейнера */
+            box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+            margin: left; /* Выравнивание по левой стороне */
+        }
+
+        /* Стили для обычного текста и вложенных элементов */
+        p, span {
+            text-align: justify; /* Выравнивание текста по ширине с обеих сторон */
+        }
+
+        /* Стили для верхних и нижних индексов */
+        sup, sub {
+            font-size: 80%; /* Размер шрифта для верхних и нижних индексов */
+        }
+
+        /* Отступ для блока с описанием формулы */
+        .formula-description {
+            margin-left: 20px; /* Отступ слева */
+        }
+
+        /* Стили для контейнера формулы и самой формулы */
+        .formula-container, .formula {
+            text-align: center; /* Выравнивание текста по центру */
+            background-color: #ff00008f; /* Цвет подложки */
+            padding: 2px; /* Внутренний отступ */
+            border-radius: 55px; /* Закругленные углы подложки */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Тень подложки */
+            max-width: 670px; /* Максимальная ширина подложки */
+            width: 50%; /* Ширина подложки равна 50% родительского контейнера */
+            box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+            margin: auto; /* Выравнивание по центру */
+        }
+
+        /* Стили для самой формулы */
+        .formula {
+            text-align: center; /* Выравнивание текста по центру */
+            color: #0700ff; /* Цвет формулы */
+            font-size: 25px; /* Размер шрифта формулы */
+            font-style: italic; /* Курсив */
+            font-weight: bold; /* Жирный шрифт формулы */
+        }
+
+        /* Стили для раздела с примерами */
+        .example-section {
+            margin-top: 20px; /* Верхний отступ раздела с примерами */
+        }
+
+        /* Стили для примеров */
+        .example {
+            font-size: 20px; /* Размер шрифта примеров */
+            color: #555; /* Цвет текста примеров */
+        }
+         /* Стили для цветной буквы */
+        .colored-letter {
+            color: #ff0000; /* Цвет буквы */
+        }
+        /* Стили для увеличенной буквы */
+        .enlarged-letter {
+            font-size: 24px; /* Размер шрифта для увеличенной буквы */
+        }
+          /* Стили для выделенных букв */
+        .special-letter {
+            font-family: 'Arial', sans-serif; /* Используемый шрифт */
+            font-style: italic; /* Курсив */
+            color: #00adff; /* Цвет текста */
+        }
+    </style>
+</head>
+<body>
+    <!-- Заголовок первого уровня -->
+    <h1>Математические формулы</h1>
+
+    <!-- Формула окружности -->
+    <h2>Формула окружности:</h2>
+    <!-- Контейнер формулы -->
+    <div class="formula-container">
+        <!-- Сама формула -->
+        <p class="formula"><b> x<sup>2</sup> + y<sup>2</sup> = r<sup>2</sup></b></p>
+    </div>
+    <!-- Описание формулы -->
+    <div class="formula-description">
+        <p><b>Эта формула описывает уравнение окружности в декартовой системе координат.</b></p>
+        <ul><b>
+            <li><span class="colored-letter enlarged-letter special-letter">x</span> и <span class="colored-letter enlarged-letter special-letter">y</span> - координаты точки на плоскости.</li>
+            <li><span class="colored-letter enlarged-letter special-letter">r</span> - радиус окружности.</li>
+        </ul></b>
+    </div>
+    <!-- Подробное описание формулы -->
+    <h3>Описание формулы:</h3>
+    <p class="formula-description"><b>Формула окружности описывает геометрическую фигуру,
+        представляющую собой множество точек, равноудаленных от центра.</b></p>
+    <p class="formula-description"><b>Здесь x и y - координаты точек,
+        а r - радиус окружности.</b></p>
+
+    <!-- Формула площади треугольника -->
+    <h2>Формула площади треугольника:</h2>
+    <!-- Контейнер формулы -->
+    <div class="formula-container">
+        <!-- Сама формула -->
+        <p class="formula"><b> S = 0.5 * a * b * sin(C)</b></p>
+    </div>
+    <!-- Описание формулы -->
+    <div class="formula-description">
+        <p><b>Где:</b></p>
+        <ul><b>
+            <li><span class="colored-letter enlarged-letter special-letter">S</span> - площадь треугольника.</li>
+            <li><span class="colored-letter enlarged-letter special-letter">a</span> и <span class="colored-letter enlarged-letter special-letter">b</span> - длины сторон треугольника.</li>
+            <li><span class="colored-letter enlarged-letter special-letter">C</span> - угол между сторонами a и b (в радианах).</li>
+        </ul></b>
+    </div>
+    <!-- Подробное описание формулы -->
+    <h3>Описание формулы:</h3>
+    <p class="formula-description"><b>Формула площади треугольника выражает площадь как половину произведения длин двух сторон на синус угла между ними.</b></p>
+
+    <!-- Формула объема цилиндра -->
+    <h2>Формула объема цилиндра:</h2>
+    <!-- Контейнер формулы -->
+    <div class="formula-container">
+        <!-- Сама формула -->
+        <p class="formula"><b> V = π * r<sup>2</sup> * h</b></p>
+    </div>
+    <!-- Описание формулы -->
+    <div class="formula-description">
+        <p><b>Где:</b></p>
+        <ul><b>
+            <li><span class="colored-letter enlarged-letter special-letter">V</span> - объем цилиндра.</li>
+            <li><span class="colored-letter enlarged-letter special-letter">π</span> (пи) - математическая константа, приблизительно равная 3.14159.</li>
+            <li><span class="colored-letter enlarged-letter special-letter">r</span> - радиус основания цилиндра.</li>
+            <li><span class="colored-letter enlarged-letter special-letter">h</span> - высота цилиндра.</li>
+        </ul></b>
+    </div>
+    <!-- Подробное описание формулы -->
+    <h3>Описание формулы:</h3>
+    <p class="formula-description"><b>Формула объема цилиндра выражает объем как произведение площади основания на высоту.</b></p>
+
+    <!-- Раздел с примерами применения формул -->
+    <div class="example-section">
+        <h2>Сферы применения формул:</h2>
+        <!-- Примеры -->
+        <p class="example">1. <b>Геометрия:</b> расчет геометрических параметров фигур.</p>
+        <p class="example">2. <b>Инженерия:</b> проектирование и расчеты конструкций.</p>
+        <p class="example">3. <b>Физика:</b> моделирование и анализ физических явлений.</p>
+    </div>
+
+</body>
+</html>
+
+<!-- ########################################################################################## -->
+
+Бонус
+
+1. Пример подключение шрифтов через ссылку
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+
+    <!-- Подключение внешних шрифтов -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=YourFontFamily">
+
+    <!-- Ваши стили -->
+    <style>
+        body {
+            font-family: 'YourFontFamily', sans-serif;
+            /* Другие стили... */
+        }
+    </style>
+</head>
+<body>
+    <!-- Ваш контент -->
+</body>
+</html>
+
+<!--
+Замените "https://fonts.googleapis.com/css?family=YourFontFamily" на фактическую ссылку на шрифт, который вы хотите
+ использовать. Например, если вы хотите использовать шрифт "Roboto", ссылка будет
+  выглядеть так: "https://fonts.googleapis.com/css?family=Roboto".
+
+Обратите внимание, что это только пример, и вам нужно заменить "YourFontFamily" и "Your Title" на фактические
+ значения, используемые в вашем проекте.
+ -->
+
+2. Пример подключения через локальные файлы шрифтов
+
+<!--
+Поместите шрифтовые файлы в ваш проект:
+Сначала загрузите файлы шрифтов (например, .woff, .woff2, .ttf) в ваш проект.
+Создайте папку, например, "fonts", и поместите файлы шрифтов в неё.
+
+Пример структуры проекта:
+ -->
+/your-project
+    /fonts
+        your-font.woff
+        your-font.woff2
+    index.html
+    style.css
+<!--
+Добавьте стили в ваш CSS:
+В вашем файле стилей (например, style.css), определите новый @font-face и используйте его в стилях элементов.
+
+Пример:
+ -->
+@font-face {
+    font-family: 'YourFontFamily';
+    src: url('fonts/your-font.woff2') format('woff2'),
+         url('fonts/your-font.woff') format('woff');
+    /* Дополнительные параметры, если нужны */
+}
+
+body {
+    font-family: 'YourFontFamily', sans-serif;
+    /* Другие стили... */
+}
+<!--
+Убедитесь, что путь к файлам шрифтов в url соответствует структуре вашего проекта.
+ -->
+<!--
+Подключите стили в HTML:
+В вашем файле HTML (например, index.html), убедитесь, что вы подключили ваш CSS файл.
+
+Пример:
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+
+    <!-- Подключение локальных стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ваш контент -->
+</body>
+</html>
+<!--
+Замените "Your Title" на фактический заголовок вашей страницы.
+
+Это позволит вам использовать локальные файлы шрифтов в вашем проекте. Убедитесь, что пути указаны правильно и что
+ браузер может найти и загрузить файлы шрифтов.
+ -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+
+Домашнее задание
+
+Курс: Разработка интерфейса на JavaScript
+Дисциплина: Основы HTML и CSS
+Домашнее задание № 3 : Введение в CSS. Форматирование текста при помощи CSS
+1. Попробуйте каждый тег
+
+На каждой новой строчке напишите по предложению используя все
+пройденные теги.
+
+К каждому тегу добавьте атрибуты class или id
+
+Затем измените с помощью CSS цвет этим предложениям (все должны
+быть разного цвета)
+
+Чем разнообразнее будут использоваться CSS свойства, тем выше вы получите
+балл. CSS свойства можно также подключать или использовать по разному. Чем
+разнообразнее, тем лучше. Удачи!
+
+2. Создайте страницу “Romeo and Juliet”
+
+3. Создайте страницу “Card Game”. Для отображения карт используйте
+спецсимволы.
+
+4. Создайте страницу “HTML Tutorial”. Для выполнения используйте все теги,
+которые прошли на занятии.
+
+<!-- ########################################################################################## -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and CSS Exercise</title>
+    <style>
+        /* Стили для разнообразных свойств */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 20px;
+        }
+
+        #paragraph1 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .paragraph2 {
+            font-style: italic;
+            color: #cc0000;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #ffcc00;
+            padding: 5px;
+        }
+
+        #container {
+            border: 2px solid #009900;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #e6ffe6;
+            border-radius: 10px;
+        }
+
+        .centered-text {
+            text-align: center;
+            color: #990099;
+        }
+    </style>
+</head>
+<body>
+    <!-- Использование различных тегов с атрибутами и стилизацией -->
+    <p id="paragraph1" class="highlight">Это первое предложение с различными тегами и атрибутами.</p>
+    <p class="paragraph2" id="container">Второе предложение выделено разными стилями с использованием CSS.</p>
+    <p class="centered-text">Третье предложение выровнено по центру и имеет свой цвет.</p>
+
+    <!-- Примеры других тегов -->
+    <div id="container">
+        <h2>Пример заголовка второго уровня</h2>
+        <ul>
+            <li><strong>Список:</strong> элемент 1</li>
+            <li><strong>Список:</strong> элемент 2</li>
+        </ul>
+        <a href="https://www.example.com" target="_blank" style="color: #cc00cc; text-decoration: none;">Ссылка на примерный сайт</a>
+    </div>
+</body>
+</html>
+
+<!-- ########################################################################################## -->
+
+
+Домашнее задание
+
+Курс: Разработка интерфейса на JavaScript
+Дисциплина: Основы HTML и CSS
+
+Домашнее задание №3: Введение в CSS. Форматирование текста при помощи CSS
+<!-- #### -->
+1. Попробуйте каждый тег
+<!-- #### -->
+На каждой новой строчке напишите по предложению используя все
+пройденные теги.
+К каждому тегу добавьте атрибуты class или id
+Затем измените с помощью CSS цвет этим предложениям (все должны
+быть разного цвета)
+<!-- #### -->
+Чем разнообразнее будут использоваться
+CSS свойства, тем выше вы получите
+балл. CSS свойства можно также подключать или использовать по разному. Чем
+разнообразнее, тем лучше. Удачи!
+<!-- #### -->
+2. Создайте страницу “Romeo and Juliet”
+<!-- #### -->
+3. Создайте страницу “Card Game”. Для отображения карт используйте
+спецсимволы.
+<!-- #### -->
+4. Создайте страницу “HTML Tutorial”. Для выполнения используйте все теги,
+которые прошли на занятии.
+<!-- #### -->
+
+<!-- ########################################################################################## -->
+1. Попробуйте каждый тег
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and CSS Exercise</title>
+    <style>
+        /* Стили для разнообразных свойств */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 20px;
+        }
+
+        #paragraph1 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .paragraph2 {
+            font-style: italic;
+            color: #cc0000;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #ffcc00;
+            padding: 5px;
+        }
+
+        #container {
+            border: 2px solid #009900;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #e6ffe6;
+            border-radius: 10px;
+        }
+
+        .centered-text {
+            text-align: center;
+            color: #990099;
+        }
+    </style>
+</head>
+<body>
+    <!-- Использование различных тегов с атрибутами и стилизацией -->
+    <p id="paragraph1" class="highlight">Это первое предложение с различными тегами и атрибутами.</p>
+    <p class="paragraph2" id="container">Второе предложение выделено разными стилями с использованием CSS.</p>
+    <p class="centered-text">Третье предложение выровнено по центру и имеет свой цвет.</p>
+
+    <!-- Примеры других тегов -->
+    <div id="container">
+        <h2>Пример заголовка второго уровня</h2>
+        <ul>
+            <li><strong>Список:</strong> элемент 1</li>
+            <li><strong>Список:</strong> элемент 2</li>
+        </ul>
+        <a href="https://www.example.com" target="_blank" style="color: #cc00cc; text-decoration: none;">Ссылка на примерный сайт</a>
+    </div>
+</body>
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+2. Создайте страницу “Romario and Juluya”
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romeo and Juliet</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        #title {
+            font-family: 'Georgia', serif;
+            color: #FF4500; /* Цвет - оранжевый */
+            font-style: italic;
+            font-size: 36px;
+        }
+
+        #author {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        hr {
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            border: 1px solid #000;
+        }
+
+        #prologue {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        #left-text, #right-text {
+            display: inline-block;
+            width: 45%;
+            vertical-align: top;
+        }
+
+        .act-title {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        .scene-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .character {
+            font-weight: bold;
+        }
+
+        .dialogue {
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .romeo {
+            color: #0000FF; /* Цвет - синий */
+        }
+
+        .juliet {
+            color: #FF1493; /* Цвет - розовый */
+        }
+
+        .sampson {
+            color: #008000; /* Цвет - зеленый */
+        }
+
+        .gregory {
+            color: #FFD700; /* Цвет - золотой */
+        }
+    </style>
+</head>
+<body>
+    <div id="title">ROMEO AND JULIET</div>
+    <div id="author">By William Shakespeare</div>
+    <hr>
+
+    <div id="prologue">
+        <div id="left-text">
+            Two households, both alike in dignity,
+            In fair Verona, where we lay our scene,
+            From ancient grudge break to new mutiny,
+            Where civil blood makes civil hands unclean.
+            From forth the fatal loins of these two foes
+            A pair of star-cross’d lovers take their life;
+            Whole misadventured piteous overthrows
+        </div>
+
+        <div id="right-text">
+            Do with their death bury their parents’ strife.
+            The fearful passage of their death-mark’d love,
+            And the continuance of their parents’ rage,
+            Which, but their children’s end, nought could remove,
+            Is now the two hours’ traffic of our stage;
+            The which if you with patient ears attend,
+            What here shall miss, our toil shall strive to mend.
+        </div>
+    </div>
+    <hr>
+
+    <div class="act-title">ACT I</div>
+    <div class="scene-title">SCENE I. Verona. A public place.</div>
+    <div class="scene-title"><i>Enter SAMPSON and GREGORY, of the house
+    of CAPULET, armed with swords and bucklers</i></div>
+
+    <div id="left-text" class="dialogue">
+        <span class="character sampson">SAMPSON</span> Gregory, o’ my word, we’ll not carry coals.<br>
+        <span class="character gregory">GREGORY</span> No, for then we should be colliers.<br>
+        <span class="character sampson">SAMPSON</span> I mean, an we be in choler, we’ll draw.<br>
+        <span class="character gregory">GREGORY</span> Ay, while you live, draw your neck out
+        o’ the collar.<br>
+        <span class="character sampson">SAMPSON</span> I strike quickly, being moved.<br>
+        <span class="character gregory">GREGORY</span> But thou art not quickly moved to strike.<br>
+        <span class="character sampson">SAMPSON</span> A dog of the house of Montague moves me.<br>
+        <span class="character gregory">GREGORY</span> To move is to stir; and to be valiant is to
+        stand: therefore, if thou art moved, thou runn’st away.<br>
+    </div>
+
+    <div id="right-text" class="dialogue">
+        <span class="character sampson">SAMPSON</span> A dog of that house shall move me to stand:
+        I will take the wall of any man or maid of Montague’s.<br>
+        <span class="character gregory">GREGORY</span> That shows thee a weak slave; for the weakest
+        goes to the wall.<br>
+        <span class="character sampson">SAMPSON</span> True; and therefore women, being the
+        weaker vessels, are ever thrust to the wall: therefore I
+        will push Montague’s men from the wall, and thrust his
+        maids to the wall.<br>
+        <span class="character gregory">GREGORY</span> The quarrel is between our masters and us
+        their men.<br>
+        <span class="character sampson">SAMPSON</span> ’Tis all one, I will show myself a tyrant: when
+        I have fought with the men, I will be cruel with the
+        maids, and cut off their heads.<br>
+        <span class="character gregory">GREGORY</span> The heads of the maids?<br>
+        <span class="character sampson">SAMPSON</span> Ay, the heads of the maids, or their
+        maidenheads; take it in what sense thou wilt.<br>
+        <span class="character gregory">GREGORY</span> They must take it in sense that feel it.<br>
+    </div>
+
+</body>
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+3. Создайте страницу “Card Game”. Для отображения карт используйте
+спецсимволы. - вариант №0.
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра в карты</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            color: #336699;
+        }
+
+        .player-cards {
+            margin-top: 20px;
+        }
+
+        .card {
+            font-size: 48px;
+            margin-right: 15px;
+            display: inline-block;
+            border: 3px solid #000;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .hearts { color: red; }
+        .diamonds { color: #e74c3c; }
+        .clubs { color: #2ecc71; }
+        .spades { color: #3498db; }
+    </style>
+</head>
+<body>
+    <h1>Игра в карты</h1>
+
+    <div class="player-cards">
+        <p><strong>У игрока 1:</strong></p>
+        <div class="card hearts">♥</div>
+        <div class="card diamonds">♦</div>
+        <div class="card diamonds">♦</div>
+        <div class="card clubs">♣</div>
+        <div class="card spades">♠</div>
+        <div class="card hearts">♥</div>
+        <!-- Дополнительные карты -->
+        <div class="card diamonds">♦</div>
+        <div class="card clubs">♣</div>
+        <div class="card spades">♠</div>
+    </div>
+
+    <div class="player-cards">
+        <p><strong>У игрока 2:</strong></p>
+        <div class="card hearts">♥</div>
+        <div class="card diamonds">♦</div>
+        <div class="card hearts">♥</div>
+        <div class="card clubs">♣</div>
+        <div class="card spades">♠</div>
+        <div class="card hearts">♥</div>
+        <!-- Дополнительные карты -->
+        <div class="card diamonds">♦</div>
+        <div class="card clubs">♣</div>
+        <div class="card spades">♠</div>
+    </div>
+</body>
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+3. Создайте страницу “Card Game”. Для отображения карт используйте
+спецсимволы. - вариант №1.
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра в карты</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #336699;
+        }
+
+        .player-cards {
+            margin-top: 20px;
+        }
+
+        .card {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Игра в карты</h1>
+
+    <div class="player-cards">
+        <p><strong>У игрока 1:</strong></p>
+        <div class="card">&#x1F0A1; Двойка - крести</div>
+        <div class="card">&#x1F0C9; Девятка - черви</div>
+        <div class="card">&#x1F0C2; Шестерка - черви</div>
+        <div class="card">&#x1F0B4; Туз - буби</div>
+        <div class="card">&#x1F0A9; Дама - пики</div>
+        <div class="card">&#x1F0AC; Валет - крести</div>
+    </div>
+
+    <div class="player-cards">
+        <p><strong>У игрока 2:</strong></p>
+        <div class="card">&#x1F0C8; Тройка - черви</div>
+        <div class="card">&#x1F0A1; Туз - крести</div>
+        <div class="card">&#x1F0AA; Десятка - крести</div>
+        <div class="card">&#x1F0B7; Король - буби</div>
+        <div class="card">&#x1F0A6; Восмёрка - пики</div>
+        <div class="card">&#x1F0C7; Тройка - черви</div>
+    </div>
+</body>
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+3. Создайте страницу “Card Game”. Для отображения карт используйте
+спецсимволы. - вариант №2.
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра в карты</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #336699;
+        }
+
+        .player-cards {
+            margin-top: 20px;
+        }
+
+        .card {
+            font-size: 36px;
+            margin-right: 10px;
+            display: inline-block;
+            border: 2px solid #000;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* Цвета мастей */
+        .hearts { color: red; }
+        .diamonds { color: #e74c3c; }
+        .clubs { color: #2ecc71; }
+        .spades { color: #3498db; }
+    </style>
+</head>
+<body>
+    <h1>Игра в карты</h1>
+
+    <div class="player-cards">
+        <p><strong>У игрока 1:</strong></p>
+        <div class="card hearts">&#x1F0A1;</div>
+        <div class="card diamonds">&#x1F0C9;</div>
+        <div class="card diamonds">&#x1F0C2;</div>
+        <div class="card clubs">&#x1F0B4;</div>
+        <div class="card spades">&#x1F0A9;</div>
+        <div class="card hearts">&#x1F0AC;</div>
+    </div>
+
+    <div class="player-cards">
+        <p><strong>У игрока 2:</strong></p>
+        <div class="card hearts">&#x1F0C8;</div>
+        <div class="card diamonds">&#x1F0A1;</div>
+        <div class="card hearts">&#x1F0AA;</div>
+        <div class="card clubs">&#x1F0B7;</div>
+        <div class="card spades">&#x1F0A6;</div>
+        <div class="card hearts">&#x1F0C7;</div>
+    </div>
+</body>
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+3. Создайте страницу “Card Game”. Для отображения карт используйте
+спецсимволы. - вариант №3.
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра в карты</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            color: #336699;
+        }
+
+        .player-cards {
+            margin-top: 20px;
+        }
+
+        .card {
+            font-size: 190px;
+            margin-right: 15px;
+            display: inline-block;
+            border: 3px solid #000;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .hearts { color: red; }
+        .diamonds { color: #e74c3c; }
+        .clubs { color: #2ecc71; }
+        .spades { color: #3498db; }
+
+        /* Дополнительные стили для улучшения внешнего вида */
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Игра в карты</h1>
+
+    <div class="player-cards">
+        <p><strong>У игрока 1:</strong></p>
+        <div class="card hearts">&#x1F0A1;</div>
+        <div class="card diamonds">&#x1F0C9;</div>
+        <div class="card diamonds">&#x1F0C2;</div>
+        <div class="card clubs">&#x1F0B4;</div>
+        <div class="card spades">&#x1F0A9;</div>
+        <div class="card hearts">&#x1F0AC;</div>
+        <!-- Дополнительные карты -->
+<!--        <div class="card diamonds">&#x1F0C4;</div>-->
+<!--        <div class="card clubs">&#x1F0B3;</div>-->
+<!--        <div class="card spades">&#x1F0AA;</div>-->
+    </div>
+
+    <div class="player-cards">
+        <p><strong>У игрока 2:</strong></p>
+        <div class="card hearts">&#x1F0C8;</div>
+        <div class="card spades">&#x1F0A8;</div>
+        <div class="card hearts">&#x1F0AA;</div>
+        <div class="card clubs">&#x1F0B7;</div>
+        <div class="card spades">&#x1F0A6;</div>
+        <div class="card hearts">&#x1F0C7;</div>
+        <!-- Дополнительные карты -->
+<!--        <div class="card diamonds">&#x1F0C3;</div>-->
+<!--        <div class="card clubs">&#x1F0B2;</div>-->
+<!--        <div class="card diamonds">&#x1F0A1;</div>-->
+    </div>
+</body>
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+3. Создайте страницу “Card Game”. Для отображения карт используйте
+спецсимволы. - вариант №4.
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра в карты</title>
+    <style>
+        /* Общие стили для всего документа */
+        body {
+            font-family: 'Arial', sans-serif; /* Шрифт */
+            line-height: 1.6; /* Межстрочный интервал */
+            margin: 20px; /* Отступы от краев */
+            background-color: #f8f9fa; /* Цвет фона */
+        }
+
+        /* Стили для заголовка страницы */
+        h1 {
+            color: #336699; /* Цвет текста */
+        }
+
+        /* Стили для контейнеров карт игроков */
+        .player-cards {
+            margin-top: 20px; /* Верхний отступ */
+            display: flex; /* Отображение карт в строку */
+            flex-wrap: wrap; /* Перенос карт на следующую строку, если не помещаются */
+        }
+
+        /* Общие стили для карт */
+        .card {
+            margin-right: 15px; /* Правый отступ между картами */
+            margin-bottom: 15px; /* Нижний отступ между картами */
+            padding: 15px; /* Внутренний отступ */
+            border: 3px solid #000; /* Обводка карты */
+            border-radius: 10px; /* Закругление углов */
+            background-color: #fff; /* Цвет фона карты */
+            text-align: center; /* Выравнивание текста по центру */
+            transition: transform 0.3s ease-in-out; /* Плавное изменение при наведении */
+        }
+
+        /* Стили для масти "черви" */
+        .hearts { color: red; }
+
+        /* Стили для масти "бубны" */
+        .diamonds { color: #e74c3c; }
+
+        /* Стили для масти "трефы" */
+        .clubs { color: #2ecc71; }
+
+        /* Стили для масти "пики" */
+        .spades { color: #3498db; }
+    </style>
+</head>
+<body>
+    <!-- Заголовок страницы -->
+    <h1>Игра в карты</h1>
+
+    <!-- Ползунок для изменения размера карт -->
+    <label for="cardSize">Размер карт:</label>
+    <input type="range" id="cardSize" min="20" max="100" value="36">
+
+    <!-- Контейнер для карт первого игрока -->
+    <div class="player-cards" id="player1Cards"></div>
+
+    <!-- Контейнер для карт второго игрока -->
+    <div class="player-cards" id="player2Cards"></div>
+
+    <!-- Скрипт на JavaScript для генерации, перемешивания, изменения размера и отображения карт -->
+    <script>
+        /* Масти и их символы */
+        const suits = ['clubs', 'spades', 'diamonds', 'hearts'];
+        const suitsSymbols = {
+            'hearts': '♥',
+            'diamonds': '♦',
+            'clubs': '♣',
+            'spades': '♠'
+        };
+
+        /* Ранги карт */
+        const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+
+        /* Функция для перемешивания колоды */
+        function shuffleDeck() {
+            let deck = [];
+            for (let suit of suits) {
+                for (let rank of ranks) {
+                    deck.push({ suit, rank });
+                }
+            }
+            return deck.sort(() => Math.random() - 0.5);
+        }
+
+        /* Функция для отображения карт в указанном контейнере с учетом размера */
+        function displayCards(playerId, cards, cardSize) {
+            const playerCardsElement = document.getElementById(playerId);
+            playerCardsElement.innerHTML = '';
+            for (let card of cards) {
+                const cardElement = document.createElement('div');
+                cardElement.style.fontSize = `${cardSize}px`; /* Изменение размера карты */
+                /* Добавляем класс масти для стилизации цвета */
+                cardElement.className = `card ${card.suit}`;
+                /* Отображаем ранг карты и символ масти */
+                cardElement.innerText = `${card.rank} ${suitsSymbols[card.suit]}`;
+                playerCardsElement.appendChild(cardElement);
+            }
+        }
+
+        /* Обработчик изменения размера карт при перемещении ползунка */
+        document.getElementById('cardSize').addEventListener('input', function() {
+            const newSize = this.value;
+            displayCards('player1Cards', player1Cards, newSize);
+            displayCards('player2Cards', player2Cards, newSize);
+        });
+
+        /* Генерируем и перемешиваем колоду */
+        const deck = shuffleDeck();
+
+        /* Раздача карт игрокам (первому и второму) */
+        const player1Cards = deck.slice(0, 9);
+        const player2Cards = deck.slice(9, 18);
+
+        /* Отображение карт для каждого игрока с начальным размером 36px */
+        displayCards('player1Cards', player1Cards, 36);
+        displayCards('player2Cards', player2Cards, 36);
+    </script>
+</body>
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+3. Создайте страницу “Card Game”. Для отображения карт используйте
+спецсимволы. - вариант №5.
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра в карты</title>
+    <style>
+        /* Общие стили для всего документа */
+        body {
+            font-family: 'Arial', sans-serif; /* Шрифт */
+            line-height: 1.6; /* Межстрочный интервал */
+            margin: 20px; /* Отступы от краев */
+            background-color: #f8f9fa; /* Цвет фона */
+        }
+
+        /* Стили для заголовка страницы */
+        h1 {
+            color: #336699; /* Цвет текста */
+        }
+
+        /* Стили для контейнеров карт игроков */
+        .player-cards {
+            margin-top: 20px; /* Верхний отступ */
+            display: flex; /* Отображение карт в строку */
+            flex-wrap: wrap; /* Перенос карт на следующую строку, если не помещаются */
+        }
+
+        /* Общие стили для карт */
+        .card {
+            width: 100px; /* Ширина карты */
+            height: 150px; /* Высота карты */
+            margin-right: 15px; /* Правый отступ между картами */
+            margin-bottom: 15px; /* Нижний отступ между картами */
+            padding: 15px; /* Внутренний отступ */
+            border: 3px solid #000; /* Обводка карты */
+            border-radius: 10px; /* Закругление углов */
+            background-color: #fff; /* Цвет фона карты */
+            text-align: center; /* Выравнивание текста по центру */
+            position: relative; /* Позиционирование элементов внутри карты */
+        }
+
+        /* Стили для масти "черви" */
+        .hearts { color: red; }
+
+        /* Стили для масти "бубны" */
+        .diamonds { color: #e74c3c; }
+
+        /* Стили для масти "трефы" */
+        .clubs { color: #2ecc71; }
+
+        /* Стили для масти "пики" */
+        .spades { color: #3498db; }
+
+        /* Стили для значения карты */
+        .card-value {
+            font-size: 14px; /* Размер шрифта значения карты */
+            color: #555; /* Цвет текста значения карты */
+            position: absolute; /* Абсолютное позиционирование значения */
+        }
+
+        /* Стили для левого верхнего угла карты */
+        .card-value.top-left {
+            top: 10px; /* Отступ от верхнего края карты */
+            left: 10px; /* Отступ от левого края карты */
+        }
+
+        /* Стили для правого нижнего угла карты */
+        .card-value.bottom-right {
+            bottom: 10px; /* Отступ от нижнего края карты */
+            right: 10px; /* Отступ от правого края карты */
+        }
+    </style>
+</head>
+<body>
+    <!-- Заголовок страницы -->
+    <h1>Игра в карты</h1>
+
+    <!-- Ползунок для изменения размера карт -->
+    <label for="cardSize">Размер карт:</label>
+    <input type="range" id="cardSize" min="20" max="100" value="50">
+
+    <!-- Выпадающий список для выбора масти -->
+    <label for="suitSelect">Масть карты:</label>
+    <select id="suitSelect">
+        <option value="all">Все масти</option>
+        <option value="hearts">Черви</option>
+        <option value="diamonds">Бубны</option>
+        <option value="clubs">Трефы</option>
+        <option value="spades">Пики</option>
+    </select>
+
+    <!-- Выпадающий список для выбора ранга карты -->
+    <label for="rankSelect">Ранг карты:</label>
+    <select id="rankSelect">
+        <option value="all">Все ранги</option>
+        <option value="A">Туз</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="J">Валет</option>
+        <option value="Q">Дама</option>
+        <option value="K">Король</option>
+    </select>
+
+    <!-- Контейнер для карт первого игрока -->
+    <div class="player-cards" id="player1Cards"></div>
+
+    <!-- Контейнер для карт второго игрока -->
+    <div class="player-cards" id="player2Cards"></div>
+
+    <!-- Скрипт на JavaScript для генерации, перемешивания, изменения размера и отображения карт -->
+    <script>
+        /* Масти и их символы */
+        const suits = ['clubs', 'spades', 'diamonds', 'hearts'];
+        const suitsSymbols = {
+            'hearts': '♥',
+            'diamonds': '♦',
+            'clubs': '♣',
+            'spades': '♠'
+        };
+
+        /* Ранги карт */
+        const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+
+        /* Функция для перемешивания колоды */
+        function shuffleDeck() {
+            let deck = [];
+            for (let suit of suits) {
+                for (let rank of ranks) {
+                    deck.push({ suit, rank });
+                }
+            }
+            return deck.sort(() => Math.random() - 0.5);
+        }
+
+        /* Функция для отображения карт в указанном контейнере с учетом размера, масти и ранга */
+        function displayCards(playerId, cards, cardSize, selectedSuit, selectedRank) {
+            const playerCardsElement = document.getElementById(playerId);
+            playerCardsElement.innerHTML = '';
+            for (let card of cards) {
+                if ((selectedSuit === 'all' || card.suit === selectedSuit) && (selectedRank === 'all' || card.rank === selectedRank)) {
+                    const cardElement = document.createElement('div');
+                    cardElement.style.width = `${cardSize}px`; /* Изменение ширины карты */
+                    cardElement.style.height = `${cardSize * 1.5}px`; /* Изменение высоты карты */
+                    /* Добавляем класс масти для стилизации цвета */
+                    cardElement.className = `card ${card.suit}`;
+                    /* Добавляем значение карты в верхний и нижний угол карты */
+                    cardElement.innerHTML = `
+                        <div class="card-value top-left">${card.rank}</div>
+                        ${suitsSymbols[card.suit]}
+                        <div class="card-value bottom-right">${card.rank}</div>`;
+                    playerCardsElement.appendChild(cardElement);
+                }
+            }
+        }
+
+        /* Обработчик изменения размера карт при перемещении ползунка */
+        document.getElementById('cardSize').addEventListener('input', function() {
+            const newSize = this.value;
+            const selectedSuit = document.getElementById('suitSelect').value;
+            const selectedRank = document.getElementById('rankSelect').value;
+            displayCards('player1Cards', player1Cards, newSize, selectedSuit, selectedRank);
+            displayCards('player2Cards', player2Cards, newSize, selectedSuit, selectedRank);
+        });
+
+        /* Обработчик изменения масти карты */
+        document.getElementById('suitSelect').addEventListener('change', function() {
+            const newSize = document.getElementById('cardSize').value;
+            const selectedSuit = this.value;
+            const selectedRank = document.getElementById('rankSelect').value;
+            displayCards('player1Cards', player1Cards, newSize, selectedSuit, selectedRank);
+            displayCards('player2Cards', player2Cards, newSize, selectedSuit, selectedRank);
+        });
+
+        /* Обработчик изменения ранга карты */
+        document.getElementById('rankSelect').addEventListener('change', function() {
+            const newSize = document.getElementById('cardSize').value;
+            const selectedSuit = document.getElementById('suitSelect').value;
+            const selectedRank = this.value;
+            displayCards('player1Cards', player1Cards, newSize, selectedSuit, selectedRank);
+            displayCards('player2Cards', player2Cards, newSize, selectedSuit, selectedRank);
+        });
+
+        /* Генерируем и перемешиваем колоду */
+        const deck = shuffleDeck();
+
+        /* Раздача карт игрокам (первому и второму) */
+        const player1Cards = deck.slice(0, 9);
+        const player2Cards = deck.slice(9, 18);
+
+        /* Отображение карт для каждого игрока с начальным размером 50px, мастью "все" и рангом "все" */
+        displayCards('player1Cards', player1Cards, 50, 'all', 'all');
+        displayCards('player2Cards', player2Cards, 50, 'all', 'all');
+    </script>
+</body>
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+4. Создайте страницу “HTML Tutorial”. Для выполнения используйте все теги,
+которые прошли на занятии. - вариант №0.
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial</title>
+    <style>
+        /* Пример стилей для страницы (можно дополнительно настроить) */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to the HTML Tutorial</h1>
+    </header>
+
+    <section>
+        <article>
+            <p>This HTML tutorial covers various HTML elements and their usage. Learn how to create a basic HTML
+                structure and enhance your web development skills.</p>
+        </article>
+
+        <article>
+            <h2>Basic HTML Structure</h2>
+            <p>HTML documents consist of the following elements:</p>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code> declaration</li>
+                <li><code>&lt;html&gt;</code> element</li>
+                <li><code>&lt;head&gt;</code> element</li>
+                <li><code>&lt;title&gt;</code> element</li>
+                <li><code>&lt;body&gt;</code> element</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Text Formatting</h2>
+            <p>Use tags like <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>,
+                etc., for text formatting.</p>
+        </article>
+
+        <article>
+            <h2>Images</h2>
+            <p>Include images using the <code>&lt;img&gt;</code> tag.</p>
+            <img src="https://placekitten.com/400/200" alt="Cute Kitten">
+        </article>
+
+        <article>
+            <h2>Links</h2>
+            <p>Create hyperlinks with the <code>&lt;a&gt;</code> tag.</p>
+            <p>Visit our <a href="https://example.com" target="_blank">example website</a>.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Explore more HTML elements and features to enhance your web development skills.</p>
+    </footer>
+
+</body>
+
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+4. Создайте страницу “HTML Tutorial”. Для выполнения используйте все теги,
+которые прошли на занятии. - вариант №1.
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial</title>
+    <style>
+        /* Стили для страницы */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Добро пожаловать в HTML-туториал</h1>
+    </header>
+
+    <section>
+        <article>
+            <p>HTML (HyperText Markup Language) — это стандартный язык разметки для создания веб-страниц. Он
+                используется для структурирования контента в интернете, предоставляя основу для отображения текста,
+                изображений, ссылок, форм и мультимедийных элементов.</p>
+        </article>
+
+        <article>
+            <h2>Основная структура HTML</h2>
+            <p>HTML-документ состоит из следующих элементов:</p>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>: Объявление версии HTML.</li>
+                <li><code>&lt;html&gt;</code>: Корневой элемент HTML-страницы.</li>
+                <li><code>&lt;head&gt;</code>: Содержит мета-информацию о документе.</li>
+                <li><code>&lt;title&gt;</code>: Устанавливает заголовок HTML-документа (отображается во вкладке
+                    браузера).</li>
+                <li><code>&lt;body&gt;</code>: Содержит содержимое HTML-документа.</li>
+            </ul>
+            <p>Вот пример простой структуры HTML:</p>
+            <code>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>
+                &nbsp;&nbsp;&lt;head&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Моя первая HTML-страница&lt;/title&gt;<br>
+                &nbsp;&nbsp;&lt;/head&gt;<br>
+                &nbsp;&nbsp;&lt;body&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Привет, мир!&lt;/h1&gt;<br>
+                &nbsp;&nbsp;&lt;/body&gt;<br>
+                &lt;/html&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Форматирование текста</h2>
+            <p>HTML предоставляет различные теги для форматирования текста:</p>
+            <ul>
+                <li><code>&lt;p&gt;</code>: Параграф</li>
+                <li><code>&lt;h1&gt;</code> до <code>&lt;h6&gt;</code>: Заголовки</li>
+                <li><code>&lt;strong&gt;</code>: Жирный текст</li>
+                <li><code>&lt;em&gt;</code>: Курсив</li>
+            </ul>
+            <p>Пример:</p>
+            <code>
+                &lt;p&gt;Это &lt;strong&gt;параграф&lt;/strong&gt; с жирным текстом.&lt;/p&gt;<br>
+                &lt;h2&gt;Подзаголовок&lt;/h2&gt;<br>
+                &lt;p&gt;Это &lt;em&gt;курсивизированное&lt;/em&gt; предложение.&lt;/p&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Изображения</h2>
+            <p>Вставка изображений с использованием тега <code>&lt;img&gt;</code>:</p>
+            <code>
+                &lt;img src="image.jpg" alt="Описание изображения"&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Ссылки</h2>
+            <p>Создание гиперссылок с тегом <code>&lt;a&gt;</code>:</p>
+            <code>
+                &lt;a href="https://example.com" target="_blank"&gt;Посетите веб-сайт примера&lt;/a&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Цветной текст</h2>
+            <p>Применение цветового стиля к тексту:</p>
+            <code>
+                &lt;p style="color: #e44d26;"&gt;Этот текст оранжевого цвета.&lt;/p&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Списки</h2>
+            <p>Использование тегов <code>&lt;ul&gt;</code> и <code>&lt;li&gt;</code> для создания списков:</p>
+            <code>
+                &lt;ul&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Первый элемент списка&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Второй элемент списка&lt;/li&gt;<br>
+                &lt;/ul&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Видео</h2>
+            <p>Вставка видео с помощью тега <code>&lt;iframe&gt;</code>:</p>
+            <code>
+                &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ВАШ_KОД" frameborder="0"
+                allowfullscreen&gt;&lt;/iframe&gt;
+            </code>
+        </article>
+    </section>
+
+    <footer>
+        <p>Исследуйте больше элементов и возможностей HTML для улучшения своих навыков веб-разработки.</p>
+    </footer>
+
+</body>
+
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+4. Создайте страницу “HTML Tutorial”. Для выполнения используйте все теги,
+которые прошли на занятии. - вариант №1_1.
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial</title>
+    <style>
+        /* Стили для страницы */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #333;
+        }
+
+        .styled-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e44d26;
+            font-style: italic;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Добро пожаловать в HTML-туториал</h1>
+    </header>
+
+    <section>
+        <article>
+            <p>HTML (HyperText Markup Language) — это стандартный язык разметки для создания веб-страниц.</p> <p>Он
+                используется для структурирования контента в интернете, предоставляя основу для отображения текста,
+                изображений, ссылок, форм и мультимедийных элементов.</p>
+        </article>
+
+        <article>
+            <h2>Основная структура HTML</h2>
+            <p>HTML-документ состоит из следующих элементов:</p>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>: Объявление версии HTML.</li>
+                <li><code>&lt;html&gt;</code>: Корневой элемент HTML-страницы.</li>
+                <li><code>&lt;head&gt;</code>: Содержит мета-информацию о документе.</li>
+                <li><code>&lt;title&gt;</code>: Устанавливает заголовок HTML-документа (отображается во вкладке
+                    браузера).</li>
+                <li><code>&lt;body&gt;</code>: Содержит содержимое HTML-документа.</li>
+            </ul>
+            <p>Вот пример простой структуры HTML:</p>
+            <code>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>
+                &nbsp;&nbsp;&lt;head&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Моя первая HTML-страница&lt;/title&gt;<br>
+                &nbsp;&nbsp;&lt;/head&gt;<br>
+                &nbsp;&nbsp;&lt;body&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Привет, мир!&lt;/h1&gt;<br>
+                &nbsp;&nbsp;&lt;/body&gt;<br>
+                &lt;/html&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Форматирование текста</h2>
+            <p>HTML предоставляет различные теги для форматирования текста:</p>
+            <ul>
+                <li><code>&lt;p&gt;</code>: Параграф</li>
+                <li><code>&lt;h1&gt;</code> до <code>&lt;h6&gt;</code>: Заголовки</li>
+                <li><code>&lt;strong&gt;</code>: Жирный текст</li>
+                <li><code>&lt;em&gt;</code>: Курсив</li>
+            </ul>
+            <p>Пример:</p>
+            <code>
+                &lt;p&gt;Это &lt;strong&gt;параграф&lt;/strong&gt; с жирным текстом.&lt;/p&gt;<br>
+                &lt;h2&gt;Подзаголовок&lt;/h2&gt;<br>
+                &lt;p&gt;Это &lt;em&gt;курсивизированное&lt;/em&gt; предложение.&lt;/p&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Изображения</h2>
+            <p>Вставка изображений с использованием тега <code>&lt;img&gt;</code>:</p>
+            <img src="https://placekitten.com/800/400" alt="Котенок">
+        </article>
+
+        <article>
+            <h2>Ссылки</h2>
+            <p>Создание гиперссылок с тегом <code>&lt;a&gt;</code>:</p>
+            <code>
+                &lt;a href="https://example.com" target="_blank"&gt;Посетите веб-сайт примера&lt;/a&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Цветной текст</h2>
+            <p>Применение цветового стиля к тексту:</p>
+            <code>
+                &lt;p style="color: #e44d26;"&gt;Этот текст оранжевого цвета.&lt;/p&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Стилизованный текст</h2>
+            <p>Пример изменения шрифта, стиля, размера и цвета:</p>
+            <span class="styled-text">Этот текст имеет стилизацию: жирный, курсив, подчеркнутый, оранжевого цвета и
+                размера 18px.</span>
+        </article>
+
+        <article>
+            <h2>Списки</h2>
+            <p>Использование тегов <code>&lt;ul&gt;</code> и <code>&lt;li&gt;</code> для создания списков:</p>
+            <code>
+                &lt;ul&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Первый элемент списка&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Второй элемент списка&lt;/li&gt;<br>
+                &lt;/ul&gt;
+            </code>
+        </article>
+
+        <article>
+            <h2>Видео</h2>
+            <p>Вставка видео с помощью тега <code>&lt;iframe&gt;</code>:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                allowfullscreen></iframe>
+        </article>
+    </section>
+
+    <footer>
+        <p>Исследуйте больше элементов и возможностей HTML для улучшения своих навыков веб-разработки.</p>
+    </footer>
+
+</body>
+
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+4. Создайте страницу “HTML Tutorial”. Для выполнения используйте все теги,
+которые прошли на занятии. - вариант №2.
+<!-- ########################################################################################## -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial</title>
+    <style>
+        /* Стили для страницы */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #333;
+        }
+
+        .styled-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e44d26;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 2px solid #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Добро пожаловать в HTML-туториал</h1>
+    </header>
+
+    <section>
+        <article>
+            <p><b>HTML</b> (Hypertext Markup Language) - это код, который используется для структурирования и отображения веб-страницы и её контента.</p>
+            <p>Например, контент может быть структурирован внутри множества параграфов, маркированных списков или с использованием изображений и таблиц данных.</p>
+            <p>Как видно из названия, этот туториал постарается дать вам базовое понимание HTML и его функций.</p>
+        </article>
+        <hr>
+        <p><b>HTML</b> не является языком программирования; это язык разметки, и используется, чтобы сообщать вашему браузеру, как отображать веб-страницы, которые вы посещаете.</p>
+        <p>Он может быть сложным или простым, в зависимости от того, как хочет веб-дизайнер.</p>
+        <p>HTML состоит из ряда элементов, которые вы используете, чтобы вкладывать или оборачивать различные части контента, чтобы заставить контент отображаться или действовать определённым образом.</p>
+        <p>Ограждающие теги могут сделать слово или изображение ссылкой на что-то ещё, могут сделать слова курсивом, сделать шрифт больше или меньше и так далее.</p>
+        <hr>
+
+        <article>
+            <h2>Основная структура HTML</h2>
+            <p>HTML-документ состоит из следующих элементов:</p>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>: Объявление версии HTML.</li>
+                <li><code>&lt;html&gt;</code>: Корневой элемент HTML-страницы.</li>
+                <li><code>&lt;head&gt;</code>: Содержит мета-информацию о документе.</li>
+                <li><code>&lt;title&gt;</code>: Устанавливает заголовок HTML-документа (отображается во вкладке
+                    браузера).</li>
+                <li><code>&lt;body&gt;</code>: Содержит содержимое HTML-документа.</li>
+            </ul>
+            <p>Вот пример простой структуры HTML:</p>
+            <code>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>
+                &nbsp;&nbsp;&lt;head&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Моя первая HTML-страница&lt;/title&gt;<br>
+                &nbsp;&nbsp;&lt;/head&gt;<br>
+                &nbsp;&nbsp;&lt;body&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Привет, мир!&lt;/h1&gt;<br>
+                &nbsp;&nbsp;&lt;/body&gt;<br>
+                &lt;/html&gt;
+            </code>
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Форматирование текста</h2>
+            <p>HTML предоставляет различные теги для форматирования текста:</p>
+            <ul>
+                <li><code>&lt;p&gt;</code>: Параграф</li>
+                <li><code>&lt;h1&gt;</code> до <code>&lt;h6&gt;</code>: Заголовки</li>
+                <li><code>&lt;strong&gt;</code>: Жирный текст</li>
+                <li><code>&lt;em&gt;</code>: Курсив</li>
+            </ul>
+            <p>Пример использования тегов форматирования текста:</p>
+            <code>
+                &lt;p&gt;Это &lt;strong&gt;параграф&lt;/strong&gt; с жирным текстом.&lt;/p&gt;<br>
+                &lt;h2&gt;Подзаголовок&lt;/h2&gt;<br>
+                &lt;p&gt;Это &lt;em&gt;курсивизированное&lt;/em&gt; предложение.&lt;/p&gt;
+            </code>
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Изображения</h2>
+            <p>Вставка изображений с использованием тега <code>&lt;img&gt;</code>:</p>
+            <img src="https://placekitten.com/800/400" alt="Котенок">
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Ссылки</h2>
+            <p>Создание гиперссылок с тегом <code>&lt;a&gt;</code>:</p>
+            <code>
+                &lt;a href="https://example.com" target="_blank"&gt;Посетите веб-сайт примера&lt;/a&gt;
+            </code>
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Цветной текст</h2>
+            <p>Применение цветового стиля к тексту:</p>
+            <code>
+                &lt;p style="color: #e44d26;"&gt;Этот текст оранжевого цвета.&lt;/p&gt;
+            </code>
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Стилизованный текст</h2>
+            <p>Пример изменения шрифта, стиля, размера и цвета:</p>
+            <span class="styled-text">Этот текст имеет стилизацию: жирный, курсив, подчеркнутый, оранжевого цвета и
+                размера 18px.</span>
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Списки</h2>
+            <p>Использование тегов <code>&lt;ul&gt;</code> и <code>&lt;li&gt;</code> для создания списков:</p>
+            <code>
+                &lt;ul&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Первый элемент списка&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Второй элемент списка&lt;/li&gt;<br>
+                &lt;/ul&gt;
+            </code>
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Видео</h2>
+            <p>Вставка видео с помощью тега <code>&lt;iframe&gt;</code>:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                allowfullscreen></iframe>
+        </article>
+    </section>
+
+    <footer>
+        <p>Исследуйте больше элементов и возможностей HTML для улучшения своих навыков веб-разработки.</p>
+    </footer>
+
+</body>
+
+</html>
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+<!-- ########################################################################################## -->
+
+
+
+
+
+
+
+<!-- ########################################################################################## -->
+ <!-- HTML#4 - Блочная структура элементов. Свойство Display. Размеры - 29.01.2024 -->
+ <!-- ПРАКТИЧЕСКАЯ РАБОТА во ВРЕМЯ КЛАССНОГО УРОКА (ПАРЫ) - 29.01.2024 -->
+ <!-- ВАРИАНТ №1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Внешние библиотеки (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Стили -->
+    <style>
+        body {
+            margin-top: 20px;
+            background: #FAFAFA;
+        }
+        .dashboard-card {
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+            border: none;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .dashboard-card .card-block {
+            padding: 25px;
+        }
+        .dashboard-card i {
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-info dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Заказы получены</h6>
+                        <h2 class="text-right"><i class="fa fa-cart-plus float-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Завершенные заказы<span class="float-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-success dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Заказы получены</h6>
+                        <h2 class="text-right"><i class="fa fa-rocket float-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Завершенные заказы<span class="float-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-warning dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Заказы получены</h6>
+                        <h2 class="text-right"><i class="fa fa-refresh float-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Завершенные заказы<span class="float-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Внешние скрипты (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- По подробнее как в Python -->
+
+Объявление HTML-документа:
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>: Объявление типа документа HTML5.
+<html lang="en">: Открывающий тег для HTML-документа с указанием языка (английский).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Заголовок документа:
+
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="utf-8">: Устанавливает кодировку документа.
+<title>: Заголовок документа, отображается во вкладке браузера.
+<meta name="viewport" content="width=device-width, initial-scale=1">: Устанавливает настройки
+просмотра для устройств с различной шириной экрана.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Подключение стилей:
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+Подключаются стили Bootstrap и шрифтов Font Awesome с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Описание стилей внутри тега <style>:
+
+<style>
+    body {
+        margin-top: 20px;
+        background: #FAFAFA;
+    }
+    .dashboard-card {
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+        border: none;
+        margin-bottom: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+    .dashboard-card .card-block {
+        padding: 25px;
+    }
+    .dashboard-card i {
+        font-size: 26px;
+    }
+</style>
+
+Здесь определены пользовательские стили для элементов. Например, фон body, стили
+карточек .dashboard-card и размер иконок внутри этих карточек.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Основное содержимое документа:
+
+<body>
+    <!-- ... -->
+</body>
+
+Весь контент страницы помещается внутрь тега <body>.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Контент с использованием Bootstrap:
+
+Внутри <body> размещаются карточки, созданные с использованием Bootstrap.
+Каждая карточка находится внутри <div class="card bg-... dashboard-card"> и имеет свой уникальный
+    цвет (bg-info, bg-success, bg-warning).
+Иконки и текст внутри карточек заполняются данными.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Подключение внешних скриптов:
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+Подключаются внешние скрипты (jQuery, Popper.js, Bootstrap.js) с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+ <!-- <!-- ВАРИАНТ №2 --> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Внешние библиотеки (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Стили -->
+    <style>
+        body {
+            margin-top: 20px;
+            background: #FAFAFA;
+        }
+        .dashboard-card {
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+            border: none;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .dashboard-card .card-block {
+            padding: 25px;
+        }
+        .dashboard-card i {
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-info dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Заказы получены</h6>
+                        <h2 class="text-right"><i class="fa fa-cart-plus float-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Завершенные заказы<span class="float-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-success dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Продукция в пути</h6>
+                        <h2 class="text-right"><i class="fa fa-truck float-left"></i><span>123</span></h2>
+                        <p class="m-b-0">Завершенные доставки<span class="float-right">87</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-warning dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Товары на складе</h6>
+                        <h2 class="text-right"><i class="fa fa-cubes float-left"></i><span>789</span></h2>
+                        <p class="m-b-0">Товары в резерве<span class="float-right">456</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-danger dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Возвраты</h6>
+                        <h2 class="text-right"><i class="fa fa-undo float-left"></i><span>10</span></h2>
+                        <p class="m-b-0">Обработанные возвраты<span class="float-right">5</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-primary dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Поддержка клиентов</h6>
+                        <h2 class="text-right"><i class="fa fa-headphones float-left"></i><span>24/7</span></h2>
+                        <p class="m-b-0">Запросы<span class="float-right">120</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-secondary dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Новые клиенты</h6>
+                        <h2 class="text-right"><i class="fa fa-users float-left"></i><span>50</span></h2>
+                        <p class="m-b-0">Клиенты на обслуживании<span class="float-right">20</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Внешние скрипты (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- По подробнее как в Python -->
+
+Объявление HTML-документа:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!DOCTYPE html>: Объявление типа документа HTML5.
+<html lang="en">: Открывающий тег для HTML-документа с указанием языка (английский).
+<head>: Секция заголовка документа.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Метаинформация и подключение стилей:
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Внешние библиотеки (CDN) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset="utf-8">: Устанавливает кодировку документа.
+<meta name="viewport" content="width=device-width, initial-scale=1">: Настройка просмотра для устройств с различной
+    шириной экрана.
+Подключение внешних стилей Bootstrap и Font Awesome с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Описание пользовательских стилей в теге <style>:
+
+<style>
+    body {
+        margin-top: 20px;
+        background: #FAFAFA;
+    }
+    .dashboard-card {
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+        border: none;
+        margin-bottom: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+    .dashboard-card .card-block {
+        padding: 25px;
+    }
+    .dashboard-card i {
+        font-size: 26px;
+    }
+</style>
+
+Устанавливаются пользовательские стили для элементов страницы, таких как body и .dashboard-card.
+    Эти стили определяют отступы, фон, тени и другие характеристики.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Содержимое страницы:
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Карточки с информацией -->
+        </div>
+    </div>
+</body>
+Контент страницы находится внутри <body>. Карточки размещаются внутри контейнера с
+классом container и строки с классом row.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Карточки:
+
+Каждая карточка находится внутри <div class="col-md-4"> (каждая из них занимает 1/3 ширины экрана).
+Класс card определяет, что это карточка Bootstrap. Классы bg-info, bg-success, bg-warning, и т. д.,
+    устанавливают цвет фона для каждой карточки.
+Иконки и содержимое карточек заполняются данными.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Подключение внешних скриптов:
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+Подключаются внешние скрипты (jQuery, Popper.js, Bootstrap.js) с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+ <!-- ВАРИАНТ №3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Внешние библиотеки (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Стили -->
+    <style>
+        body {
+            margin-top: 20px;
+            background: #FAFAFA;
+        }
+        .dashboard-card {
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+            border: none;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .dashboard-card .card-block {
+            padding: 25px;
+        }
+        .dashboard-card i {
+            font-size: 26px;
+        }
+        /* Дополнительные стили или анимации могут быть добавлены здесь */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="dashboard-cards">
+
+            <div class="col-md-4 mb-3">
+                <div class="card bg-info dashboard-card" id="card1">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Еда и Напитки</h6>
+                        <i class="fa fa-cutlery float-left"></i>
+                        <h2 class="text-right"><span id="value1">100</span></h2>
+                        <p class="m-b-0">Выполненные заказы <span class="float-right">50 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-success dashboard-card" id="card2">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Ноутбуки и ПК</h6>
+                        <i class="fa fa-laptop float-left"></i>
+                        <h2 class="text-right"><span id="value2">75</span></h2>
+                        <p class="m-b-0">Товары в наличии<span class="float-right">25 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-warning dashboard-card" id="card3">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Транспорт</h6>
+                        <i class="fa fa-car float-left"></i>
+                        <h2 class="text-right"><span id="value3">50</span></h2>
+                        <p class="m-b-0">Автомобили в наличии<span class="float-right">10 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-danger dashboard-card" id="card4">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Смартфоны и Гаджеты</h6>
+                        <i class="fa fa-mobile float-left"></i>
+                        <h2 class="text-right"><span id="value4">120</span></h2>
+                        <p class="m-b-0">Гаджеты в наличии<span class="float-right">80 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-primary dashboard-card" id="card5">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Доставка</h6>
+                        <i class="fa fa-truck float-left"></i>
+                        <h2 class="text-right"><span id="value5">60</span></h2>
+                        <p class="m-b-0">Заказы в пути<span class="float-right">400 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-secondary dashboard-card" id="card6">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Одежда и Аксессуары</h6>
+                        <i class="fa fa-shopping-bag float-left"></i>
+                        <h2 class="text-right"><span id="value6">30</span></h2>
+                        <p class="m-b-0">Модные новинки 2024<span class="float-right">20 000</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function updateValues() {
+            document.getElementById('value1').innerText = getRandomInt(1, 200);
+            document.getElementById('value2').innerText = getRandomInt(1, 200);
+            document.getElementById('value3').innerText = getRandomInt(1, 200);
+            document.getElementById('value4').innerText = getRandomInt(1, 200);
+            document.getElementById('value5').innerText = getRandomInt(1, 200);
+            document.getElementById('value6').innerText = getRandomInt(1, 200);
+        }
+
+        // Обновление значений каждые 5 секунд
+        setInterval(updateValues, 5000);
+    </script>
+</body>
+</html>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- По подробнее как в Python -->
+
+Объявление HTML-документа:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!DOCTYPE html>: Объявление типа документа HTML5.
+<html lang="en">: Открывающий тег для HTML-документа с указанием языка (английский).
+<head>: Секция заголовка документа.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Метаинформация и подключение стилей:
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Внешние библиотеки (CDN) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Стили -->
+<style>
+    /* Стили остаются теми же, что и в предыдущем примере */
+</style>
+
+<meta charset="utf-8">: Устанавливает кодировку документа.
+<meta name="viewport" content="width=device-width, initial-scale=1">: Настройка просмотра для устройств с различной
+    шириной экрана.
+Подключение внешних стилей Bootstrap и Font Awesome с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Описание пользовательских стилей:
+
+<style>
+    /* Стили остаются теми же, что и в предыдущем примере */
+</style>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Содержимое страницы:
+
+<body>
+    <div class="container">
+        <div class="row" id="dashboard-cards">
+            <!-- Карточки с информацией -->
+        </div>
+    </div>
+</body>
+
+Контент страницы находится внутри <body>. Карточки размещаются внутри контейнера с классом container и строки с классом row.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Карточки:
+
+Каждая карточка находится внутри <div class="col-md-4 mb-3"> (каждая из них занимает 1/3 ширины экрана).
+Индивидуальные идентификаторы (id) присваиваются каждой карточке (card1, card2, и т.д.).
+Иконки и содержимое карточек заполняются данными. Обратите внимание на использование спанов с id для
+    отображения и обновления случайных значений.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Подключение внешних скриптов:
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+Подключаются внешние скрипты (jQuery, Popper.js, Bootstrap.js) с использованием CDN.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+JavaScript-скрипт:
+
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function updateValues() {
+        // Обновление случайных значений внутри карточек
+        document.getElementById('value1').innerText = getRandomInt(1, 200);
+        document.getElementById('value2').innerText = getRandomInt(1, 200);
+        document.getElementById('value3').innerText = getRandomInt(1, 200);
+        document.getElementById('value4').innerText = getRandomInt(1, 200);
+        document.getElementById('value5').innerText = getRandomInt(1, 200);
+        document.getElementById('value6').innerText = getRandomInt(1, 200);
+    }
+
+    // Обновление значений каждые 5 секунд
+    setInterval(updateValues, 5000);
+</script>
+
+Создаются две функции: getRandomInt для получения случайного целого числа в заданном
+    диапазоне и updateValues для обновления значений в карточках.
+setInterval(updateValues, 5000): Запуск функции обновления значений каждые 5 секунд.
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+Домашнее задание
+
+Курс: Разработка интерфейса на JavaScript
+Дисциплина: Основы HTML и CSS
+
+Домашнее задание №4: Блочная структура элементов. Свойство Display. Размеры
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+1. Создать страницу, как на примере: "Флексагон"
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!DOCTYPE html>
+<html>
+ <head>
+  <title>Флексагон</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+     <style>
+         body {
+  font-family: Arial, Verdana,  sans-serif; /* Семейство шрифтов */
+  font-size: 20pt; /* Размер основного шрифта в пунктах  */
+  background-color: #f0f0f0; /* Цвет фона веб-страницы */
+  color: #333; /* Цвет основного текста */
+}
+h1 {
+  color: #a52a2a; /* Цвет заголовка */
+  font-size: 75pt; /* Размер шрифта в пунктах */
+  font-family: Georgia, Times, serif; /* Семейство шрифтов */
+  font-weight: normal; /* Нормальное начертание текста  */
+}
+p {
+  text-align: justify; /* Выравнивание по ширине */
+  margin-left: 75px; /* Отступ слева в пикселах */
+  margin-right: 10px; /* Отступ справа в пикселах */
+  border-left: 1px solid #999; /* Параметры линии слева */
+  border-bottom: 1px solid #999; /* Параметры линии снизу */
+  padding-left: 10px; /* Отступ от линии слева до текста  */
+  padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+}
+     </style>
+ </head>
+ <body>
+  <h1>Флексагон</h1>
+  <p><b>Флексагон представляет собой бумажную фигуру, которая имеет
+  три и более стороны. Поначалу кажется, что это невозможно, но вспомните
+  ленту Мёбиуса, она ведь имеет всего одну сторону, в отличие от листа  бумаги,
+  и, тем не менее, реальна. Так же реален и флексагон, который легко сделать и
+  склеить в домашних условиях. Он выглядит как двухсторонний шестиугольник, но
+  стоит согнуть его особым образом, и мы увидим третью сторону. Легко убедиться,
+  что мы имеем дело именно с тремя сторонами, если раскрасить их в разные цвета.
+  Перегибая флексагон, по очереди будем наблюдать все его поверхности.</b></p>
+ </body>
+</html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+2. Создать страницу, как на примере: "Вот такой чай"
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Блоки</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<style>
+    .text {
+    margin: 20px;
+    padding: 10px;
+}
+.www {
+    background-color: #569099;
+    color: white;
+    font-size: 80px;
+}
+.sss {
+    color: black;
+    background-color: #CAD8D0;
+    font-size: 30px;
+}
+</style>
+<body>
+    <div class="text www"><b>Вот такой чай</b></div>
+    <div class="text sss">
+        История о том, как один человек хотел попить чайку, но по ошибке
+        вместо воды попытался налить в чайник бензин, и что из этого получилось.
+    </div>
+</body>
+</html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+

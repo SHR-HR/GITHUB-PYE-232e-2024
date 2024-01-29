@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Внешние библиотеки (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Стили -->
+    <style>
+        body {
+            margin-top: 20px;
+            background: #FAFAFA;
+        }
+        .dashboard-card {
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+            border: none;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .dashboard-card .card-block {
+            padding: 25px;
+        }
+        .dashboard-card i {
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-info dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Заказы получены</h6>
+                        <h2 class="text-right"><i class="fa fa-cart-plus float-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Завершенные заказы<span class="float-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-success dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Продукция в пути</h6>
+                        <h2 class="text-right"><i class="fa fa-truck float-left"></i><span>123</span></h2>
+                        <p class="m-b-0">Завершенные доставки<span class="float-right">87</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-warning dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Товары на складе</h6>
+                        <h2 class="text-right"><i class="fa fa-cubes float-left"></i><span>789</span></h2>
+                        <p class="m-b-0">Товары в резерве<span class="float-right">456</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-danger dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Возвраты</h6>
+                        <h2 class="text-right"><i class="fa fa-undo float-left"></i><span>10</span></h2>
+                        <p class="m-b-0">Обработанные возвраты<span class="float-right">5</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-primary dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Поддержка клиентов</h6>
+                        <h2 class="text-right"><i class="fa fa-headphones float-left"></i><span>24/7</span></h2>
+                        <p class="m-b-0">Запросы<span class="float-right">120</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-secondary dashboard-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Новые клиенты</h6>
+                        <h2 class="text-right"><i class="fa fa-users float-left"></i><span>50</span></h2>
+                        <p class="m-b-0">Клиенты на обслуживании<span class="float-right">20</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Внешние скрипты (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+

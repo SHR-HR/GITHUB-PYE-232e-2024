@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Градиентные карточки для панели управления</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Внешние библиотеки (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Стили -->
+    <style>
+        body {
+            margin-top: 20px;
+            background: #FAFAFA;
+        }
+        .dashboard-card {
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+            border: none;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .dashboard-card .card-block {
+            padding: 25px;
+        }
+        .dashboard-card i {
+            font-size: 26px;
+        }
+        /* Дополнительные стили или анимации могут быть добавлены здесь */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="dashboard-cards">
+
+            <div class="col-md-4 mb-3">
+                <div class="card bg-info dashboard-card" id="card1">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Еда и Напитки</h6>
+                        <i class="fa fa-cutlery float-left"></i>
+                        <h2 class="text-right"><span id="value1">100</span></h2>
+                        <p class="m-b-0">Выполненные заказы <span class="float-right">50 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-success dashboard-card" id="card2">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Ноутбуки и ПК</h6>
+                        <i class="fa fa-laptop float-left"></i>
+                        <h2 class="text-right"><span id="value2">75</span></h2>
+                        <p class="m-b-0">Товары в наличии<span class="float-right">25 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-warning dashboard-card" id="card3">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Транспорт</h6>
+                        <i class="fa fa-car float-left"></i>
+                        <h2 class="text-right"><span id="value3">50</span></h2>
+                        <p class="m-b-0">Автомобили в наличии<span class="float-right">10 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-danger dashboard-card" id="card4">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Смартфоны и Гаджеты</h6>
+                        <i class="fa fa-mobile float-left"></i>
+                        <h2 class="text-right"><span id="value4">120</span></h2>
+                        <p class="m-b-0">Гаджеты в наличии<span class="float-right">80 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-primary dashboard-card" id="card5">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Доставка</h6>
+                        <i class="fa fa-truck float-left"></i>
+                        <h2 class="text-right"><span id="value5">60</span></h2>
+                        <p class="m-b-0">Заказы в пути<span class="float-right">400 000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-secondary dashboard-card" id="card6">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Одежда и Аксессуары</h6>
+                        <i class="fa fa-shopping-bag float-left"></i>
+                        <h2 class="text-right"><span id="value6">30</span></h2>
+                        <p class="m-b-0">Модные новинки 2024<span class="float-right">20 000</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function updateValues() {
+            document.getElementById('value1').innerText = getRandomInt(1, 200);
+            document.getElementById('value2').innerText = getRandomInt(1, 200);
+            document.getElementById('value3').innerText = getRandomInt(1, 200);
+            document.getElementById('value4').innerText = getRandomInt(1, 200);
+            document.getElementById('value5').innerText = getRandomInt(1, 200);
+            document.getElementById('value6').innerText = getRandomInt(1, 200);
+        }
+
+        // Обновление значений каждые 5 секунд
+        setInterval(updateValues, 5000);
+    </script>
+</body>
+</html>
