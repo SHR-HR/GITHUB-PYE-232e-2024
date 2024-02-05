@@ -1,0 +1,388 @@
+<!-- ############################################################################################################## -->
+
+<!--
+Дата выполнения Домашней-Работы №5: 05 - ФЕВРАЛЯ - 06 ФЕВРАЛЯ 2024 года.
+
+                                             Домашнее задание
+                                                                              Курс: Разработка интерфейса на JavaScript
+                                                                              Дисциплина: Основы HTML и CSS
+                                     Тема занятия №5 : Списки. Вложенные списки
+-->
+<!-- ############################################################################################################## -->
+<!--
+                                           Выполните следующие задания:
+
+1. Реализовать страницу со списком фруктов.
+Необходимо стилизовать список следующим образом:
+• Светлый фон у всего списка
+• Более темный фон у одного элемента списка
+• Самый тёмный фон только под текстом
+• Добавить внешние и внутренние отступы
+
+2. Реализовать HTML-страницу со списком задач.
+• Чётные и нечётные элементы списка имеют разные оттенки
+• Отмеченные элементы имеют серый фон. Иконку с галочкой и зачёркнутый текст
+• Неотмеченные без галочки
+• Крестик красный отобразить с помощью спецсимвола.
+
+Иконки ко второму заданию находятся в архиве Homework в папке Материалы к заданию
+Скинуть итоговые задания в архиве!
+-->
+<!--
+                                                Урок от 05.02.2024
+-->
+<!--
+Выполнение задания: 1)
+-->
+                     <!-- ###################################################################### -->
+<!--
+ВАРИАНТ №3: Чуть-Чуть красивее (Но не все еще не так как в примере в ДЗ)
+-->
+                     <!-- ###################################################################### -->
+<!--
+КОД:
+-->
+                     <!-- ###################################################################### -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chart-container {
+            margin-top: 20px;
+        }
+
+        .fruit-input {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .fruit-label {
+            width: 70px;
+            font-weight: bold;
+        }
+
+        .fruit-count {
+            width: 50px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .generate-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .generate-button:hover {
+            background-color: #45a049;
+        }
+
+        .fruits-list {
+            list-style-type: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .fruits-list li {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .fruit-emoji {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fruit-input">
+            <label class="fruit-label" for="appleCount"><span class="fruit-emoji">🍎</span> Яблоко:</label>
+            <input type="number" id="appleCount" min="0" value="25" class="fruit-count" data-type="Яблоко">
+        </div>
+
+        <div class="fruit-input">
+            <label class="fruit-label" for="pearCount"><span class="fruit-emoji">🍐</span> Груша:</label>
+            <input type="number" id="pearCount" min="0" value="45" class="fruit-count" data-type="Груша">
+        </div>
+
+        <div class="fruit-input">
+            <label class="fruit-label" for="bananaCount"><span class="fruit-emoji">🍌</span> Банан:</label>
+            <input type="number" id="bananaCount" min="0" value="15" class="fruit-count" data-type="Банан">
+        </div>
+
+        <div class="fruit-input">
+            <label class="fruit-label" for="orangeCount"><span class="fruit-emoji">🍊</span> Апельсин:</label>
+            <input type="number" id="orangeCount" min="0" value="35" class="fruit-count" data-type="Апельсин">
+        </div>
+
+        <button class="generate-button" onclick="generateFruits()">Создать список и диаграмму</button>
+
+        <ul id="fruits-list" class="fruits-list"></ul>
+
+        <div class="chart-container">
+            <canvas id="fruitChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        var fruitsData = [];
+
+        function generateFruits() {
+            var fruitCountElements = document.querySelectorAll(".fruit-count");
+            var fruitsList = document.getElementById("fruits-list");
+            var chartData = [];
+
+            fruitsList.innerHTML = '';
+            fruitsData = [];
+
+            fruitCountElements.forEach(function (element) {
+                var fruitType = element.getAttribute("data-type");
+                var count = parseInt(element.value);
+
+                var listItem = document.createElement("li");
+                listItem.innerHTML = `<span class="fruit-emoji">${getFruitEmoji(fruitType)}</span> ${fruitType} - ${count}`;
+                fruitsList.appendChild(listItem);
+
+                fruitsData.push({
+                    label: fruitType,
+                    data: [count],
+                    backgroundColor: getBackgroundColor(fruitType),
+                });
+
+                chartData.push({
+                    label: fruitType,
+                    data: [count],
+                    backgroundColor: getBackgroundColor(fruitType),
+                });
+            });
+
+            updateChart(chartData);
+        }
+
+        function getFruitEmoji(fruitType) {
+            switch (fruitType) {
+                case "Яблоко":
+                    return "🍎";
+                case "Груша":
+                    return "🍐";
+                case "Банан":
+                    return "🍌";
+                case "Апельсин":
+                    return "🍊";
+                default:
+                    return "❓";
+            }
+        }
+
+        function getBackgroundColor(fruitType) {
+            switch (fruitType) {
+                case "Яблоко":
+                    return "rgba(255, 99, 132, 0.7)";
+                case "Груша":
+                    return "rgba(255, 204, 0, 0.7)";
+                case "Банан":
+                    return "rgba(255, 215, 0, 0.7)";
+                case "Апельсин":
+                    return "rgba(255, 165, 0, 0.7)";
+                default:
+                    return "rgba(0, 0, 0, 0.7)";
+            }
+        }
+
+        function updateChart(data) {
+            var ctx = document.getElementById("fruitChart").getContext("2d");
+            var myChart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: ["Количество"],
+                    datasets: data,
+                },
+                options: {
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+        }
+    </script>
+</body>
+</html>
+         <!-- ########################################################################################## -->
+<!--1. Шаг №1: Объявление документа-->
+
+<!--Пример выполнения этого шага:-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--    <style>-->
+<!--        /* ... стили для body, .container, .fruit-input, и другие ... */-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    &lt;!&ndash; ... контент страницы ... &ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+
+<!--Подробное описание этого кода:-->
+
+<!--<!DOCTYPE html>: Определение типа документа - HTML5.-->
+<!--<html lang="en">: Начало HTML-разметки с указанием языка (английский).-->
+<!--<head>: Секция заголовка документа, включает мета-теги и подключение внешней библиотеки Chart.js.-->
+<!--<meta charset="UTF-8">: Установка кодировки документа.-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">: Контроль масштабирования для-->
+<!--    устройств с различной шириной экрана.-->
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>: Подключение библиотеки Chart.js для создания графиков.-->
+<!--<style>: Секция стилей для определения внешнего вида элементов на странице.-->
+
+<!--Шаг №2: Стилизация страницы-->
+
+<!--Пример выполнения этого шага:-->
+
+<!--body {-->
+<!--    background-color: #f5f5f5;-->
+<!--    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;-->
+<!--    display: flex;-->
+<!--    align-items: center;-->
+<!--    justify-content: center;-->
+<!--    height: 100vh;-->
+<!--    margin: 0;-->
+<!--}-->
+
+<!--.container {-->
+<!--    /* ... стили для контейнера ... */-->
+<!--}-->
+
+<!--/* ... стили для других элементов ... */-->
+
+<!--Подробное описание этого кода:-->
+
+<!--body: Определение общих стилей для всего документа, таких как цвет фона, шрифт и центрирование содержимого.-->
+<!--.container: Стили для основного контейнера, в котором размещены остальные элементы страницы.-->
+<!--@keyframes fadeInUp: Анимация, делающая элементы появляющимися с небольшим подъемом сверху при загрузке страницы.-->
+<!--Стили для различных элементов формы, ввода данных и графика.-->
+
+<!--Шаг №3: Контент страницы-->
+
+<!--Пример выполнения этого шага:-->
+
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <div class="fruit-input">-->
+<!--            &lt;!&ndash; ... ввод данных для яблок ... &ndash;&gt;-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Аналогичные блоки для других фруктов &ndash;&gt;-->
+
+<!--        <button class="generate-button" onclick="generateFruits()">Создать список и диаграмму</button>-->
+
+<!--        <ul id="fruits-list" class="fruits-list"></ul>-->
+
+<!--        <div class="chart-container">-->
+<!--            <canvas id="fruitChart"></canvas>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <script>-->
+<!--        // ... скрипт JavaScript для обработки данных ...-->
+<!--    </script>-->
+<!--</body>-->
+
+<!--Подробное описание этого кода:-->
+
+<!--div с классом container: Основной контейнер страницы.-->
+<!--div с классом fruit-input: Блок для ввода данных о фруктах.-->
+<!--button с классом generate-button: Кнопка для генерации списка фруктов и построения диаграммы.-->
+<!--ul с id fruits-list: Список, в который будут добавляться элементы с данными о фруктах.-->
+<!--div с классом chart-container: Контейнер для размещения графика.-->
+
+<!--Шаг №4: JavaScript-логика-->
+
+<!--Пример выполнения этого шага:-->
+
+<!--<script>-->
+<!--    var fruitsData = [];-->
+
+<!--    function generateFruits() {-->
+<!--        // ... логика создания списка фруктов и данных для графика ...-->
+<!--    }-->
+
+<!--    function getFruitEmoji(fruitType) {-->
+<!--        // ... логика определения эмодзи для фрукта ...-->
+<!--    }-->
+
+<!--    function getBackgroundColor(fruitType) {-->
+<!--        // ... логика определения цвета для фрукта ...-->
+<!--    }-->
+
+<!--    function updateChart(data) {-->
+<!--        // ... логика обновления графика ...-->
+<!--    }-->
+<!--</script>-->
+
+<!--Подробное описание этого кода:-->
+
+<!--var fruitsData = [];: Объявление массива для хранения данных о фруктах.-->
+<!--Функция generateFruits(): Обработка данных ввода, создание списка фруктов и массива данных для графика.-->
+<!--Функции getFruitEmoji(), getBackgroundColor(): Логика определения эмодзи и цвета для фруктов.-->
+<!--Функция updateChart(data): Логика обновления графика на основе предоставленных данных.-->
+
+<!--Общий вывод: -->
+
+<!--Этот код создает интерактивную страницу для ввода данных о фруктах, -->
+<!--отображения списка фруктов и построения столбчатой диаграммы на основе введенных значений. -->
+<!--Он включает в себя HTML-разметку, стили CSS для оформления, а также JavaScript-логику -->
+<!--для обработки данных и обновления графика.-->
+<!-- ############################################################################################################## -->

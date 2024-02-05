@@ -1,0 +1,376 @@
+<!-- ############################################################################################################## -->
+
+<!--
+Дата выполнения Домашней-Работы №5: 05 - ФЕВРАЛЯ - 06 ФЕВРАЛЯ 2024 года.
+
+                                             Домашнее задание
+                                                                              Курс: Разработка интерфейса на JavaScript
+                                                                              Дисциплина: Основы HTML и CSS
+                                     Тема занятия №5 : Списки. Вложенные списки
+-->
+<!-- ############################################################################################################## -->
+<!--
+                                           Выполните следующие задания:
+
+1. Реализовать страницу со списком фруктов.
+Необходимо стилизовать список следующим образом:
+• Светлый фон у всего списка
+• Более темный фон у одного элемента списка
+• Самый тёмный фон только под текстом
+• Добавить внешние и внутренние отступы
+
+2. Реализовать HTML-страницу со списком задач.
+• Чётные и нечётные элементы списка имеют разные оттенки
+• Отмеченные элементы имеют серый фон. Иконку с галочкой и зачёркнутый текст
+• Неотмеченные без галочки
+• Крестик красный отобразить с помощью спецсимвола.
+
+Иконки ко второму заданию находятся в архиве Homework в папке Материалы к заданию
+Скинуть итоговые задания в архиве!
+-->
+<!--
+                                                Урок от 05.02.2024
+-->
+<!--
+Выполнение задания: 1)
+-->
+                     <!-- ###################################################################### -->
+<!--
+Вариант №2 (Немного "иной" вариант)
+-->
+                     <!-- ###################################################################### -->
+<!--
+КОД:
+-->
+                     <!-- ###################################################################### -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список фруктов</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .fruit-list {
+            list-style-type: none;
+            padding: 10px;
+            width: 200px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .chart-container {
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="fruit-list" id="fruits">
+            <!-- Список фруктов будет создан здесь -->
+        </ul>
+
+        <div class="chart-container">
+            <canvas id="fruitChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        var fruitsData = [];
+
+        function generateFruits() {
+            var fruitCountElements = document.querySelectorAll(".fruit-count");
+            var fruitsList = document.getElementById("fruits");
+            var chartData = [];
+
+            fruitsList.innerHTML = '';
+            fruitsData = [];
+
+            fruitCountElements.forEach(function (element) {
+                var fruitType = element.getAttribute("data-type");
+                var count = parseInt(element.value);
+
+                var listItem = document.createElement("li");
+                listItem.textContent = `${fruitType} - ${count}`;
+                fruitsList.appendChild(listItem);
+
+                fruitsData.push({
+                    label: fruitType,
+                    data: [count],
+                    backgroundColor: getBackgroundColor(fruitType),
+                });
+
+                chartData.push({
+                    label: fruitType,
+                    data: [count],
+                    backgroundColor: getBackgroundColor(fruitType),
+                });
+            });
+
+            updateChart(chartData);
+        }
+
+        function getBackgroundColor(fruitType) {
+            switch (fruitType) {
+                case "Яблоко":
+                    return "rgba(255, 99, 132, 0.7)";
+                case "Груша":
+                    return "rgba(255, 206, 86, 0.7)";
+                case "Банан":
+                    return "rgba(75, 192, 192, 0.7)";
+                case "Апельсин":
+                    return "rgba(54, 162, 235, 0.7)";
+                default:
+                    return "rgba(0, 0, 0, 0.7)";
+            }
+        }
+
+        function updateChart(data) {
+            var ctx = document.getElementById("fruitChart").getContext("2d");
+            var myChart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: ["Количество"],
+                    datasets: data,
+                },
+                options: {
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+        }
+    </script>
+
+    <div>
+        <label for="appleCount">Яблоко:</label>
+        <input type="number" id="appleCount" min="0" value="25" class="fruit-count" data-type="Яблоко">
+    </div>
+
+    <div>
+        <label for="pearCount">Груша:</label>
+        <input type="number" id="pearCount" min="0" value="45" class="fruit-count" data-type="Груша">
+    </div>
+
+    <div>
+        <label for="bananaCount">Банан:</label>
+        <input type="number" id="bananaCount" min="0" value="15" class="fruit-count" data-type="Банан">
+    </div>
+
+    <div>
+        <label for="orangeCount">Апельсин:</label>
+        <input type="number" id="orangeCount" min="0" value="35" class="fruit-count" data-type="Апельсин">
+    </div>
+
+    <button onclick="generateFruits()">Создать список и диаграмму</button>
+</body>
+</html>
+         <!-- ########################################################################################## -->
+
+<!--Шаг 1: Общее описание-->
+
+<!--Этот код представляет собой веб-страницу, на которой пользователь может вводить количество четырех различных-->
+<!--видов фруктов (яблоки, груши, бананы, апельсины) в соответствующие поля ввода. После ввода данных-->
+<!--и нажатия кнопки, на странице отображается список введенных фруктов и строится столбчатая диаграмма,-->
+<!--иллюстрирующая количество каждого фрукта.-->
+
+<!--Шаг 2: Объявление документа-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Список фруктов</title>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<!--    <style>-->
+<!--        /* ... стили для body, .container, .fruit-list, .chart-container ... */-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    &lt;!&ndash; ... контент страницы ... &ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+
+<!--Подробнее:-->
+<!--Здесь создается структура HTML-документа с объявлением типа документа,-->
+<!--установкой кодировки, определением вида и масштабирования, а также заданием заголовка страницы.-->
+<!--Также включается скрипт библиотеки Chart.js и описываются стили для элементов страницы.-->
+
+<!--Шаг 3: Стилизация страницы-->
+
+<!--body {-->
+<!--    background-color: #f0f0f0;-->
+<!--    font-family: Arial, sans-serif;-->
+<!--}-->
+
+<!--.container {-->
+<!--    display: flex;-->
+<!--    justify-content: space-between;-->
+<!--    padding: 20px;-->
+<!--}-->
+
+<!--.fruit-list {-->
+<!--    /* ... стили для списка фруктов ... */-->
+<!--}-->
+
+<!--.chart-container {-->
+<!--    width: 60%;-->
+<!--}-->
+
+<!--Стилизация страницы:-->
+<!--Устанавливаются общие стили для body, определяется структура контейнера с фруктами и графикой,-->
+<!--а также стили для списка фруктов и контейнера с графикой.-->
+
+<!--Шаг 4: Контент страницы-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <ul class="fruit-list" id="fruits">-->
+<!--            &lt;!&ndash; Список фруктов будет создан здесь &ndash;&gt;-->
+<!--        </ul>-->
+
+<!--        <div class="chart-container">-->
+<!--            <canvas id="fruitChart"></canvas>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash; ... ввод данных и кнопка ... &ndash;&gt;-->
+<!--</body>-->
+<!--Контент страницы:-->
+<!--Определен контейнер для расположения списка фруктов и графика.-->
+<!--Эти элементы будут созданы и отображены динамически.-->
+
+<!--Шаг 5: JavaScript-логика-->
+
+<!--<script>-->
+<!--    var fruitsData = [];-->
+
+<!--    function generateFruits() {-->
+<!--        // ... логика создания списка фруктов и данных для графика ...-->
+<!--    }-->
+
+<!--    function getBackgroundColor(fruitType) {-->
+<!--        // ... логика определения цвета для фрукта ...-->
+<!--    }-->
+
+<!--    function updateChart(data) {-->
+<!--        // ... логика обновления графика ...-->
+<!--    }-->
+<!--</script>-->
+
+<!--JavaScript-логика:-->
+<!--В этом скрипте объявляются функции для генерации списка фруктов, определения цвета для фрукта и обновления графика.-->
+<!--Также создается массив fruitsData для хранения данных о фруктах.-->
+
+<!--Шаг 6: Создание и ввод данных-->
+
+<!--<div>-->
+<!--    <label for="appleCount">Яблоко:</label>-->
+<!--    <input type="number" id="appleCount" min="0" value="25" class="fruit-count" data-type="Яблоко">-->
+<!--</div>-->
+<!--&lt;!&ndash; Аналогичные блоки для других фруктов &ndash;&gt;-->
+<!--<button onclick="generateFruits()">Создать список и диаграмму</button>-->
+
+<!--Создание и ввод данных:-->
+<!--Здесь предоставлены поля ввода для каждого типа фрукта и кнопка "Создать список и диаграмму".-->
+<!--По нажатии кнопки вызывается функция generateFruits(), которая обновляет список фруктов и строит график.-->
+
+<!--Шаг 7: Динамическое обновление списка фруктов и графика-->
+
+<!--function generateFruits() {-->
+<!--    var fruitCountElements = document.querySelectorAll(".fruit-count");-->
+<!--    var fruitsList = document.getElementById("fruits");-->
+<!--    var chartData = [];-->
+
+<!--    fruitsList.innerHTML = '';-->
+<!--    fruitsData = [];-->
+
+<!--    fruitCountElements.forEach(function (element) {-->
+<!--        var fruitType = element.getAttribute("data-type");-->
+<!--        var count = parseInt(element.value);-->
+
+<!--        var listItem = document.createElement("li");-->
+<!--        listItem.textContent = `${fruitType} - ${count}`;-->
+<!--        fruitsList.appendChild(listItem);-->
+
+<!--        fruitsData.push({-->
+<!--            label: fruitType,-->
+<!--            data: [count],-->
+<!--            backgroundColor: getBackgroundColor(fruitType),-->
+<!--        });-->
+
+<!--        chartData.push({-->
+<!--            label: fruitType,-->
+<!--            data: [count],-->
+<!--            backgroundColor: getBackgroundColor(fruitType),-->
+<!--        });-->
+<!--    });-->
+
+<!--    updateChart(chartData);-->
+<!--}-->
+
+<!--function getBackgroundColor(fruitType) {-->
+<!--    switch (fruitType) {-->
+<!--        case "Яблоко":-->
+<!--            return "rgba(255, 99, 132, 0.7)";-->
+<!--        case "Груша":-->
+<!--            return "rgba(255, 206, 86, 0.7)";-->
+<!--        case "Банан":-->
+<!--            return "rgba(75, 192, 192, 0.7)";-->
+<!--        case "Апельсин":-->
+<!--            return "rgba(54, 162, 235, 0.7)";-->
+<!--        default:-->
+<!--            return "rgba(0, 0, 0, 0.7)";-->
+<!--    }-->
+<!--}-->
+
+<!--function updateChart(data) {-->
+<!--    var ctx = document.getElementById("fruitChart").getContext("2d");-->
+<!--    var myChart = new Chart(ctx, {-->
+<!--        type: "bar",-->
+<!--        data: {-->
+<!--            labels: ["Количество"],-->
+<!--            datasets: data,-->
+<!--        },-->
+<!--        options: {-->
+<!--            scales: {-->
+<!--                x: {-->
+<!--                    stacked: true,-->
+<!--                },-->
+<!--                y: {-->
+<!--                    stacked: true,-->
+<!--                    beginAtZero: true,-->
+<!--                },-->
+<!--            },-->
+<!--        },-->
+<!--    });-->
+<!--}-->
+
+<!--Динамическое обновление списка фруктов и графика:-->
+<!--Функция generateFruits() собирает данные из полей ввода, обновляет список фруктов и-->
+<!--создает массив данных для графика. Функции getBackgroundColor() и updateChart() используются для-->
+<!--определения цвета фрукта и обновления столбчатой диаграммы соответственно.-->
+
+<!--Общий вывод: -->
+<!--Этот код создает интерактивную страницу для ввода данных о фруктах, -->
+<!--отображения списка фруктов и построения столбчатой диаграммы на основе введенных значений. -->
+<!--Каждая строчка кода выполняет конкретную задачу, начиная от объявления документа, стилей и заканчивая -->
+<!--динамическим обновлением контента и графика.-->
+<!-- ############################################################################################################## -->

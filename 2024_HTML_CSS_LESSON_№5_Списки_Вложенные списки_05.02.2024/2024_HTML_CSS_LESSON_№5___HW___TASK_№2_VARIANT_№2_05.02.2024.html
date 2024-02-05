@@ -1,0 +1,235 @@
+<!-- ############################################################################################################## -->
+
+<!--
+Дата выполнения Домашней-Работы №5: 05 - ФЕВРАЛЯ - 06 ФЕВРАЛЯ 2024 года.
+
+                                             Домашнее задание
+                                                                              Курс: Разработка интерфейса на JavaScript
+                                                                              Дисциплина: Основы HTML и CSS
+                                     Тема занятия №5 : Списки. Вложенные списки
+-->
+<!-- ############################################################################################################## -->
+<!--
+                                           Выполните следующие задания:
+
+1. Реализовать страницу со списком фруктов.
+Необходимо стилизовать список следующим образом:
+• Светлый фон у всего списка
+• Более темный фон у одного элемента списка
+• Самый тёмный фон только под текстом
+• Добавить внешние и внутренние отступы
+
+2. Реализовать HTML-страницу со списком задач.
+• Чётные и нечётные элементы списка имеют разные оттенки
+• Отмеченные элементы имеют серый фон. Иконку с галочкой и зачёркнутый текст
+• Неотмеченные без галочки
+• Крестик красный отобразить с помощью спецсимвола.
+
+Иконки ко второму заданию находятся в архиве Homework в папке Материалы к заданию
+Скинуть итоговые задания в архиве!
+-->
+<!--
+                                                Урок от 05.02.2024
+-->
+<!--
+Выполнение задания: 2)
+-->
+                     <!-- ###################################################################### -->
+<!--
+Самый простой Вариант - Вариант 2:
+-->
+                     <!-- ###################################################################### -->
+<!--
+КОД:
+-->
+                     <!-- ###################################################################### -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Список задач</title>
+</head>
+<style>
+  * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  li:nth-child(odd) {
+    background-color: #d9edf7; /* оттенок для четных элементов */
+  }
+
+  li:nth-child(even) {
+    background-color: #dff0d8; /* оттенок для нечетных элементов */
+  }
+
+  .checked {
+    background-color: #ccc !important; /* серый фон для отмеченных элементов */
+    text-decoration: line-through;
+  }
+
+  .delete {
+    color: #d9534f; /* красный цвет крестика */
+    cursor: pointer;
+  }
+
+  .delete:hover {
+    text-decoration: underline;
+  }
+</style>
+<body>
+    <ul id="taskList">
+        <li class="checked">✔️ Выполненная задача <span class="delete">❌</span></li>
+        <li>Невыполненная задача <span class="delete">❌</span></li>
+        <li class="checked">✔️ Еще одна выполненная задача <span class="delete">❌</span></li>
+        <li>Еще одна невыполненная задача <span class="delete">❌</span></li>
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const taskList = document.getElementById('taskList');
+            const deleteButtons = document.querySelectorAll('.delete');
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const listItem = this.parentNode;
+                    listItem.parentNode.removeChild(listItem);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+         <!-- ########################################################################################## -->
+
+<!--1. Шаг №1: Настройка и подключение стилей-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="ru">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="stylesheet" href="styles.css">-->
+<!--    <title>Список задач</title>-->
+<!--</head>-->
+
+<!--<!DOCTYPE html>: Определение типа документа - HTML5.-->
+<!--<html lang="ru">: Начало HTML-разметки с указанием языка (русский).-->
+<!--<head>: Секция заголовка документа, включает мета-теги и подключение внешнего-->
+<!--    файла стилей "styles.css".-->
+<!--<meta charset="UTF-8">: Установка кодировки документа.-->
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">: Задание совместимости-->
+<!--    с Internet Explorer.-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">: Контроль масштабирования-->
+<!--    для устройств с различной шириной экрана.-->
+
+<!--2. Шаг №2: Стилизация страницы и определение задач-->
+
+
+<!--<style>-->
+<!--  * {-->
+<!--    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;-->
+<!--    background-color: #f5f5f5;-->
+<!--    color: #1a1a1a;-->
+<!--  }-->
+
+<!--  ul {-->
+<!--    list-style-type: none;-->
+<!--    padding: 0;-->
+<!--  }-->
+
+<!--  li {-->
+<!--    padding: 10px;-->
+<!--    margin: 5px;-->
+<!--    border-radius: 5px;-->
+<!--  }-->
+
+<!--  li:nth-child(odd) {-->
+<!--    background-color: #d9edf7; /* оттенок для четных элементов */-->
+<!--  }-->
+
+<!--  li:nth-child(even) {-->
+<!--    background-color: #dff0d8; /* оттенок для нечетных элементов */-->
+<!--  }-->
+
+<!--  .checked {-->
+<!--    background-color: #ccc !important; /* серый фон для отмеченных элементов */-->
+<!--    text-decoration: line-through;-->
+<!--  }-->
+
+<!--  .delete {-->
+<!--    color: #d9534f; /* красный цвет крестика */-->
+<!--    cursor: pointer;-->
+<!--  }-->
+
+<!--  .delete:hover {-->
+<!--    text-decoration: underline;-->
+<!--  }-->
+<!--</style>-->
+
+<!--Общие стили: Задание общих стилей для всех элементов-->
+<!--    на странице, таких как шрифт, цвет фона и текста.-->
+<!--Стили для ul (списка): Сброс стилей маркера списка и-->
+<!--    установка отступов.-->
+<!--Стили для li (элементов списка): Определение внешнего и-->
+<!--    внутреннего отступов, а также скругления углов.-->
+<!--Стили для li:nth-child(odd) и li:nth-child(even): Определение цветов фона-->
+<!--    для четных и нечетных элементов списка.-->
+<!--Стили для .checked: Определение стилей для отмеченных элементов, включая-->
+<!--    цвет фона и зачеркивание текста. Важность (!important) используется,-->
+<!--    чтобы переопределить стандартные стили.-->
+<!--Стили для .delete и .delete:hover: Определение стилей для кнопки удаления-->
+<!--    задачи, включая цвет и эффект при наведении.-->
+
+<!--3. Шаг №3: Разметка и удаление задач-->
+
+
+<!--<body>-->
+<!--    <ul id="taskList">-->
+<!--        <li class="checked">✔️ Выполненная задача <span class="delete">❌</span></li>-->
+<!--        <li>Невыполненная задача <span class="delete">❌</span></li>-->
+<!--        <li class="checked">✔️ Еще одна выполненная задача <span class="delete">❌</span></li>-->
+<!--        <li>Еще одна невыполненная задача <span class="delete">❌</span></li>-->
+<!--    </ul>-->
+
+<!--    <script>-->
+<!--        document.addEventListener('DOMContentLoaded', function () {-->
+<!--            const taskList = document.getElementById('taskList');-->
+<!--            const deleteButtons = document.querySelectorAll('.delete');-->
+
+<!--            deleteButtons.forEach(button => {-->
+<!--                button.addEventListener('click', function () {-->
+<!--                    const listItem = this.parentNode;-->
+<!--                    listItem.parentNode.removeChild(listItem);-->
+<!--                });-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--<body>: Начало тела документа.-->
+<!--<ul id="taskList">: Начало упорядоченного списка задач с идентификатором "taskList".-->
+<!--<li> элементы: Элементы списка с текстом задач и кнопкой удаления (<span class="delete">❌</span>).-->
+<!--Скрипт для удаления задач: JavaScript-скрипт, использующий событие DOMContentLoaded для-->
+<!--    обработки события клика на кнопке удаления. Когда кнопка нажимается,-->
+<!--    соответствующий элемент списка удаляется из DOM-структуры.-->
+<!-- ############################################################################################################## -->
